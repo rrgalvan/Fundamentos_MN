@@ -10,5 +10,6 @@ copyright: Licencia libre bajo los términos Creative Commons Compartir-Igual 3.
 # Structure
 nav:
   - Introducción: index.md
+  - Fundamentos: fundamentos.md
   - Primeros pasos: primeros_pasos.md
   - Acerca de: about.md
