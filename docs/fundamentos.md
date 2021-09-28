@@ -1,6 +1,5 @@
 ## Fundamentos de programación
 
-El objetivo de esta sección es simplemente
 ### ¿Qué es un algoritmo?
 
 Sin entrar en una definición más precisa, entenderemos por [algoritmo](https://es.wikipedia.org/wiki/Algoritmo) a un conjunto de pasos, instrucciones o acciones lógicas que se deben seguir para resolver un problema, de forma que:
@@ -27,189 +26,68 @@ Un algoritmo es independiente del lenguaje de ordenador o la máquina donde se i
 
 ### Lenguajes de ordenador
 
-- El **[lenguaje de máquina](w:Lenguaje_de_máquina)** es el único lenguaje que la computadora "entiende" y es capaz de ejecutar.
+- El **[lenguaje de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_máquina)** es el único lenguaje que la computadora es capaz de ejecutar. Consiste en una serie de instrucciones de básicas de control que se almacenan en la [memoria del ordenador](https://es.wikipedia.org/wiki/Memoria_(inform%C3%A1tica)) (en forma de dígitos binarios) y que la [unidad central de procesamiento](https://es.wikipedia.org/wiki/Unidad_central_de_procesamiento) (la CPU) puede ejecutar directamente.
 
 <!-- end list -->
 
   - Los **[lenguajes de
-    programación](w:Lenguaje_de_programación)** son el
+    programación](https://es.wikipedia.org/wiki/Lenguaje_de_programación)** son el
     medio de comunicación entre el programador y una computadora. El
     programador escribe en algún lenguaje de programación y utiliza las
-    herramientas provistas por ese lenguaje para transformarlo en
+    herramientas previstas por ese lenguaje para transformarlo en
     lenguaje de máquina.
 
 <!-- end list -->
 
 
-#### Tipos de lenguajes
-
-Existe una gran cantidad de lenguajes de programación, que están
-pensados para distintas finalidades, siguen distintos
-[paradigmas](:w:Paradigma_de_programación), y de una u otra
-forma se diferencian de los demás.
-
-##### Esquemas de programación
-
-El esquema de programación llamado **[Programación
-Imperativa](:w:Programación_imperativa)**, consiste en
-escribir una secuencia de instrucciones una detrás de la otra, que se
-ejecutarán en orden. Algunas de esas instrucciones pueden hacer que la
-máquina pase a una instrucción que no sea la siguiente, tal vez porque
-se cumpla una condición que hayamos establecido.
-
-En los últimos años ha tomado fuerza otro paradigma de computación,
-llamado **[Programación Orientada a
-Objetos](:w:Programación_orientada_a_objetos)** , en el cual
-se intentan modelar los sistemas creados como extensiones de la realidad
-mediante la definición de "objetos" que modelan entidades de la vida
-real y que interactúan entre sí mediante "mensajes" llamadas métodos.
-
-El lenguaje C es un lenguaje imperativo, no orientado a objetos.
+Además de según los distintos modelos o [paradigmas de programación](https://es.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3n)  (imperativa, declarativa, orientada a objetos, etc), los lenguajes de programación se pueden clasificar como sigue.
 
 ##### Alto o bajo nivel
 
-Por otro lado, los lenguajes de programación se clasifican en niveles.
-Un lenguaje es de más **[bajo
-nivel](w:Lenguaje_de_bajo_nivel)** cuanto más cercano esté al
-código de máquina, y un lenguaje que es de más **[alto
-nivel](w:Lenguaje_de_alto_nivel)** cuanto más lejano esté de
-la máquina y más cercano al lenguaje humano.
+Los [lenguajes de bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel) son aquellos más cercanos al lenguaje máquina y por tanto ejercen un control directo sobre el hardware.
 
-C es un lenguaje de alto nivel aunque tiene muchas características de
+**[C](https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n))** es un [lenguaje de alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel), es decir más cercano al lenguaje humano que el lenguaje máquina. Aunque tiene muchas características de
 lenguaje de bajo nivel (como el uso que permite hacer de la memoria).
 Estas características hacen que C sea un lenguaje muy potente, ya que
 permite optimizar al máximo los recursos de la máquina. Por ende, esto
 también hace que la dificultad y que los errores que se puedan cometer
-programando aumenten. Así que a C se le considera de nivel medio.
+programando aumenten. Así, con frecuencia, a C se le considera de nivel medio.
 
-Lenguajes de más alto nivel que C son aquellos en los que el programador
-no necesita encargarse de manipular la memoria, como
-**[Java](w:Lenguaje_de_programación_Java)**,
-**[C\#](w:C_Sharp)**, **[Python](w:Python)**,
-**[Ruby](w:Ruby)**, entre otros.
+Lenguajes de **más alto nivel que C** son aquellos en los que el
+programador no necesita encargarse de manipular directamente el
+hardware, en particular la memoria. Algunos lenguajes de alto nivel
+muy usados en métodos numéricos:
+**[Matlab](https://es.wikipedia.org/wiki/MATLAB)/[Octave](https://es.wikipedia.org/wiki/GNU_Octave)**,
+**[Python](https://es.wikipedia.org/wiki/Python)**, **[Fortran](https://es.wikipedia.org/wiki/Fortran)**, **[Julia](https://es.wikipedia.org/wiki/Julia_(lenguaje_de_programaci%C3%B3n))**.
+**[Mathematica](https://es.wikipedia.org/wiki/Mathematica)** y **[R](https://es.wikipedia.org/wiki/R_(lenguaje_de_programaci%C3%B3n))** son lenguajes muy usados en matemáticas y estadística y, con frecuencia, también en métodos numéricos.
+Otros lenguajes de alto nivel muy utilizados:
+**[Java](https://es.wikipedia.org/wiki/Lenguaje_de_programación_Java)**,
+**[C\#](https://es.wikipedia.org/wiki/C_Sharp)**.
 
 ##### Compilados o interpretados
 
-Otra forma de clasificar a los lenguajes de programación que es según la
-forma en que se ejecutan sus órdenes. Existen los lenguajes que son
-**[interpretados](w:Lenguaje_interpretado)**, cuyas órdenes
-pasan a través de un intérprete que se encarga de ejecutarlas (a partir
-del código fuente) en el mismo momento en que están siendo leídas.
-Algunos de los lenguajes interpretados son
-**[Python](w:Python)**, **[Perl](w:Perl)** o
-**[Tcl](w:Tcl)**, entre muchos otros.
+Los lenguajes de programación se pueden también clasificar en función de
+la forma en que se ejecutan sus órdenes. Existen lenguajes que son
+**[interpretados](https://es.wikipedia.org/wiki/Lenguaje_interpretado)**,
+en los que las órdenes reflejadas en el código fuente pasan a través
+de un programa (llamado un *intérprete*) que se encarga de ejecutarlas
+directamente, en el mismo momento en que están siendo leídas por el
+intérprete. Lenguaje de este tipo muy usados en el cálculo numérico son:
+**[Matlab](https://es.wikipedia.org/wiki/MATLAB)/[Octave](https://es.wikipedia.org/wiki/GNU_Octave)** y **[Python](https://es.wikipedia.org/wiki/Python)**.
 
-La contraparte de los lenguajes interpretados son los lenguajes
-**[compilados](w:Lenguaje_compilado)** (como el mismo C) que
-se diferencian en que las órdenes son transformadas a lenguaje de
-máquina que se almacena en un archivo ejecutable. Ese archivo puede
-ejecutarse luego, sin recurrir al compilador.
+Por contra, en los lenguajes
+**[compilados](https://es.wikipedia.org/wiki/Lenguaje_compilado)** (como el mismo **[C](https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n))**,  **[Fortran](https://es.wikipedia.org/wiki/Fortran)** o, en cierto sentido, **[Julia](https://es.wikipedia.org/wiki/Julia_(lenguaje_de_programaci%C3%B3n))**)
+las órdenes descritas en su código fuente pasan por un proceso de ***compilación*** (transformación en código máquina por un programa llamado **[compilador](https://es.wikipedia.org/wiki/Compilador)** que se almacena en un fichero o [archivo ejecutable](https://es.wikipedia.org/wiki/Ejecutable). Ese archivo puede
+ejecutarse posteriormente y de forma directa, es decir sin recurrir a un intérprete.
 
-Los lenguajes compilados tienen la ventaja de la velocidad y la
-eficiencia, pero los interpretados tienen la ventaja de que,
-generalmente, son muy portables y de más alto nivel.
+- **Ventajas de los lenguajes interpretados**: Suelen ser muy portables
+  (entre distintos tipos de ordenadores, siempre que cuenten con un
+  intérprete), de programación más ágil y de más alto nivel.
 
-### Estructura de la memoria de un ordenador
+- **Ventajas de los lenguajes compilados**: suelen tener mayor la
+  velocidad de ejecución y mayor eficiencia (menor consumo de memoria
+  u otros recursos del ordenador). Y de entre los lenguajes compilados
+  usuales, es común considerar a **C** el de *mayor velocidad* y menor
+  consumo de recursos, en general.
 
-Parte de esta potencia de C viene de que permite acceder con mucha
-libertad a la memoria de la máquina. Para entender un poco cómo es
-posible, debemos entender cómo se guardan los datos en la memoria.
-
-Imaginemos que la memoria tiene un montón de casillas, una enorme fila
-de casillas, cada una de las cuales contiene un [dígito binario
-(bit)](w:Bit):
-
-0101001010100001010101001010000100111010110010010101001011010110001101010110101010110111...
-
-Es exactamente así, pero es más cómodo recordar que esos bits se
-encuentran agrupados de ocho en ocho, formando [octetos
-(bytes)](w:Byte):
-
-<table>
-<tbody>
-<tr class="odd">
-<td><p>01010010</p></td>
-<td><p>10100001</p></td>
-<td><p>01010100</p></td>
-<td><p>10100001</p></td>
-<td><p>00111010</p></td>
-<td><p>11001001</p></td>
-<td><p>01010010</p></td>
-<td><p>11010110</p></td>
-<td><p>00110101</p></td>
-<td><p>01101010</p></td>
-<td><p>10110111</p></td>
-<td><p>...</p></td>
-</tr>
-</tbody>
-</table>
-
-Cada octeto puede contener \(2^8=256\) combinaciones distintas de ceros
-y unos, es decir, cualquier número entre 0 y 255:
-
-<table>
-<tbody>
-<tr class="odd">
-<td><p>82</p></td>
-<td><p>161</p></td>
-<td><p>84</p></td>
-<td><p>161</p></td>
-<td><p>58</p></td>
-<td><p>201</p></td>
-<td><p>82</p></td>
-<td><p>214</p></td>
-<td><p>181</p></td>
-<td><p>106</p></td>
-<td><p>183</p></td>
-<td><p>...</p></td>
-</tr>
-</tbody>
-</table>
-
-También podemos representar estos números en base hexadecimal:
-
-<table>
-<tbody>
-<tr class="odd">
-<td><p>0x52</p></td>
-<td><p>0xA1</p></td>
-<td><p>0x54</p></td>
-<td><p>0xA1</p></td>
-<td><p>0x3A</p></td>
-<td><p>0xC9</p></td>
-<td><p>0x52</p></td>
-<td><p>0xD6</p></td>
-<td><p>0x35</p></td>
-<td><p>0x6A</p></td>
-<td><p>0xB7</p></td>
-<td><p>...</p></td>
-</tr>
-</tbody>
-</table>
-
-O considerarlos caracteres, mediante alguna
-[codificación](w:Codificación_de_caracteres):
-
-<table>
-<tbody>
-<tr class="odd">
-<td><p>R</p></td>
-<td><p>¡</p></td>
-<td><p>T</p></td>
-<td><p>¡</p></td>
-<td><p>:</p></td>
-<td><p>É</p></td>
-<td><p>R</p></td>
-<td><p>Ö</p></td>
-<td><p>5</p></td>
-<td><p>j</p></td>
-<td><p>·</p></td>
-<td><p>...</p></td>
-</tr>
-</tbody>
-</table>
-
-Este es el tipo de dato más elemental que nos podemos encontrar en C: el
-caracter. Un caracter ocupa exactamente un byte (8 bits) de memoria, y
-puede contener un número entre 0 y 255, o entre -128 y 127, dependiendo
-si queremos considerarlo como sin signo o con él.
+Típicamente, un algoritmo que debe ser probado y analizado en métodos numéricos, se desarrollará utilizando un lenguaje interpretado. Si se desea experimentar su potencia o explotarlo como producto final, se desarrollará en un lenguaje compilado.

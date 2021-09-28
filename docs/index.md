@@ -2,13 +2,19 @@
 
 Curso de introducción al lenguaje C orientado a los métodos y la simulación numérica.
 
-Este curso pretende ofrecer de forma simple y clara una **introducción rápida a la programación con el lenguaje C**. El objetivo es no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para una persona que se inicia en ester lenguaje *para su uso en matemáticas* y, concretamente, para la implementación de **algoritmos relacionados con el cálculo y los *métodos numéricos***. Se presentan numerosos ejemplos que ilustran conceptos relacionados con esta temática, acompañados con los conocimientos teóricos mínimos para comprenderlos.
+Este curso pretende ofrecer de forma simple y clara una **introducción rápida a la programación con el lenguaje C**. El objetivo es no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para una persona que se inicia en ester lenguaje *para su uso en matemáticas* y, concretamente, para la implementación de **algoritmos relacionados con el cálculo y los *métodos numéricos***. Se presentan numerosos ejemplos siempre ilustrando conceptos relacionados con esta temática, acompañados con los conocimientos matemáticos mínimos para comprenderlos.
+
 
 ## ¿Para quién es este libro?
 
-Este libro está dirigido a toda persona que desee obtener unos conocimientos básicos en programación en lenguaje C para algoritmos/asignaturas relacionados con las matemáticas, en especial con los métodos numéricos y la simulación numérica.
+Este libro está realizado pensando en estudiantes del Grado en Matemáticas de la Universidad de Cádiz pero dirigido a toda persona que desee obtener unos conocimientos básicos en programación en lenguaje C para algoritmos/asignaturas relacionados con las matemáticas, en especial con los métodos numéricos y la simulación numéricas para desarrolladores de software numérico. Por supuesto, se recomienda las personas interesadas el profundizar en el futuro en estos temas, realizando cursos o consultando bibliografía. Algunos clásicos:
 
-Aunque no sea el lenguaje más usado en métodos numéricos, unos conocimientos básicos de ese lenguaje pueden ser fundamentales para desarrolladores de software numérico.
+
+    H. Schildt, C. Guía de autoenseñanza
+    Osborne/McGraw-Hill, 2002
+
+    Kincaid, D., Cheney, W., Análisis Numérico. Las matemáticas del cálculo científico.
+    Addison-Wesley-Iberoamericana 1994
 
 ## ¿Cómo puedo utilizar este material?
 
@@ -31,7 +37,7 @@ Con el paso del tiempo, C se ha convertido en el lenguaje más trascendente de l
 
 ## Características del lenguaje C
 
-- C es un lenguaje de medio o relativamente [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel), es decir, el código es relativamente cercano al lenguaje máquina con respecto al lenguaje humano o lenguajes de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel).
+- C es un lenguaje de medio o relativamente [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel), es decir, el código C es relativamente cercano al lenguaje máquina (respecto al lenguaje humano o a lenguajes de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel)).
 - Es un [lenguaje compilado](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado), es decir requiere de un [compilador](https://es.wikipedia.org/wiki/Compilador) (traductor que genera [código de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina) a partir del [código fuente](https://es.wikipedia.org/wiki/C%C3%B3digo_fuente)). El programa ya compilado puede ejecutarse directamente en la máquina.
 - Estas características hacen que el código resultante de la programación en lenguaje C sea mucho *más rápido que otros lenguajes* de mayor nivel como [Python](https://www.python.org/) o [Matlab](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/index): lenguajes usados con frecuencia en cálculo numérico, pero que son de tipo [interpretado](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)), no compilado.
 - Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python o Matlab/Octave.
