@@ -8,15 +8,22 @@ Sin entrar en una definición más precisa, entenderemos por [algoritmo](https:/
 - Cada uno de estos pasos está definido sin ambigüedad
 - El algoritmo termina un tiempo finito después de ejecutar todos los pasos.
 
+Buena parte de los [métodos numéricos](https://es.wikipedia.org/wiki/An%C3%A1lisis_num%C3%A9rico) se centra en el desarrollo y análisis matemático de algoritmos para  calcular aproximaciones (tan exactas como deseemos) de la solución de problemas concretos.
 
-###### **Características**:
+**Ejemplo**: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz de una función $f(x)$, es decir, un número $\alpha\in\mathbb R$ tal que $f(\alpha)=0$:
 
-- Un algoritmo tene que ser preciso.
-- Tiene que estar bien definido.
-- Tiene que ser finito.
-- Es es independiente del lenguaje de ordenador o la máquina donde se implemente.
+- Datos de entrada: una función real de una variable, $f(x)$, su derivada, $f'(x)$, una estimación $x_0\in\mathbb R$, y el número máximo de iteraciones, $N\in\mathbb N$:
 
-Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una secuencia de instrucciones escritas en un lenguaje determinado para realizar o implementar uno o más algoritmos en el ordenador.
+- Repetir, para cada $k\in\{0, N-1\}$:
+$$
+x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}
+$$
+
+Bajo determinadas hipótesis (por ejemplo, $f'\neq0$ «cerca de $\alpha$») se puede demostrar que $x_k \to \alpha$ y, para cualquier $k$, se puede estimar el error (la diferencia) entre $x_k$ y $\alpha$.
+
+Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos.
+
+Un algoritmo es independiente del lenguaje de ordenador o la máquina donde se implemente.
 
 ### Lenguajes de ordenador
 
@@ -34,14 +41,14 @@ Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una se
 <!-- end list -->
 
 
-### Tipos de lenguajes
+#### Tipos de lenguajes
 
 Existe una gran cantidad de lenguajes de programación, que están
 pensados para distintas finalidades, siguen distintos
 [paradigmas](:w:Paradigma_de_programación), y de una u otra
 forma se diferencian de los demás.
 
-#### Esquemas de programación
+##### Esquemas de programación
 
 El esquema de programación llamado **[Programación
 Imperativa](:w:Programación_imperativa)**, consiste en
@@ -59,7 +66,7 @@ real y que interactúan entre sí mediante "mensajes" llamadas métodos.
 
 El lenguaje C es un lenguaje imperativo, no orientado a objetos.
 
-#### Alto o bajo nivel
+##### Alto o bajo nivel
 
 Por otro lado, los lenguajes de programación se clasifican en niveles.
 Un lenguaje es de más **[bajo
@@ -81,7 +88,7 @@ no necesita encargarse de manipular la memoria, como
 **[C\#](w:C_Sharp)**, **[Python](w:Python)**,
 **[Ruby](w:Ruby)**, entre otros.
 
-#### Compilados o interpretados
+##### Compilados o interpretados
 
 Otra forma de clasificar a los lenguajes de programación que es según la
 forma en que se ejecutan sus órdenes. Existen los lenguajes que son

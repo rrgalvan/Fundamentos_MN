@@ -13,3 +13,18 @@ nav:
   - Fundamentos: fundamentos.md
   - Primeros pasos: primeros_pasos.md
   - Acerca de: about.md
+
+markdown_extensions:
+  - pymdownx.arithmatex
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+
+# # JavaScript (for MathJax LaTeX)
+# extra_javascript:
+#   - 'javascripts/extra.js'
+#   - 'javascripts/MathJax.js'
