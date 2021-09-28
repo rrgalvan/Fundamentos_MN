@@ -101,15 +101,20 @@
 <li>Cada uno de estos pasos está definido sin ambigüedad</li>
 <li>El algoritmo termina un tiempo finito después de ejecutar todos los pasos.</li>
 </ul>
-<p>Buena parte de los <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_num%C3%A9rico">métodos numéricos</a> se centra en el desarrollo y análisis matemático de algoritmos para  calcular aproximaciones (tan exactas como deseemos) de la solución de problemas concretos. Por ejemplo, el siguiente algoritmo se puede utilizar para</p>
-<div>
-<div class="MathJax_Preview">
-f(x)=\sin{x}
-</div>
-<script type="math/tex; mode=display">
-f(x)=\sin{x}
-</script>
-</div>
+<p>Buena parte de los <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_num%C3%A9rico">métodos numéricos</a> se centra en el desarrollo y análisis matemático de algoritmos para  calcular aproximaciones (tan exactas como deseemos) de la solución de problemas concretos.</p>
+<p><strong>Ejemplo</strong>: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz de una función <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, es decir, un número <span><span class="MathJax_Preview">\alpha\in\mathbb R</span><script type="math/tex">\alpha\in\mathbb R</script></span> tal que <span><span class="MathJax_Preview">f(\alpha)=0</span><script type="math/tex">f(\alpha)=0</script></span>:</p>
+<ul>
+<li>
+<p>Datos de entrada: una función real de una variable, <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, su derivada, <span><span class="MathJax_Preview">f'(x)</span><script type="math/tex">f'(x)</script></span>, una estimación <span><span class="MathJax_Preview">x_0\in\mathbb R</span><script type="math/tex">x_0\in\mathbb R</script></span>, y el número máximo de iteraciones, <span><span class="MathJax_Preview">N\in\mathbb N</span><script type="math/tex">N\in\mathbb N</script></span>:</p>
+</li>
+<li>
+<p>Repetir, para cada <span><span class="MathJax_Preview">k\in\{0, N-1\}</span><script type="math/tex">k\in\{0, N-1\}</script></span>:
+$$
+x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}
+$$</p>
+</li>
+</ul>
+<p>Bajo determinadas hipótesis (por ejemplo, <span><span class="MathJax_Preview">f'\neq0</span><script type="math/tex">f'\neq0</script></span> «cerca de <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>») se puede demostrar que <span><span class="MathJax_Preview">x_k \to \alpha</span><script type="math/tex">x_k \to \alpha</script></span> y, para cualquier <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>, se puede estimar el error (la diferencia) entre <span><span class="MathJax_Preview">x_k</span><script type="math/tex">x_k</script></span> y <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>.</p>
 <p>Un <a href="https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico">programa</a> es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos.</p>
 <p>Un algoritmo es independiente del lenguaje de ordenador o la máquina donde se implemente.</p>
 <h3 id="lenguajes-de-ordenador">Lenguajes de ordenador</h3>
@@ -291,8 +296,7 @@ si queremos considerarlo como sin signo o con él.</p></div>
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js" defer></script>
-        <script src="../javascripts/extra.js" defer></script>
-        <script src="../javascripts/MathJax.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
         <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
