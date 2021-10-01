@@ -1,9 +1,0 @@
-## Primeros pasos
-
-### El lenguaje C
-
-El [lenguaje de programación C](https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n)) fue creado por Dennis Ritchie entre 1969 y 1973 cuando trabajaba en Bell Laboratories de AT&T junto con Ken Thompson en el diseño del sistema operativo UNIX. C fue creado para poder escribir dicho sistema operativo en un lenguaje de alto nivel, independiente del hardware donde se ejecutara.
-
-Contar con un lenguaje de alto nivel permitió el avance de los sistemas operativos, ya que el mismo código podía ser utilizado en las distintas plataformas, propiciando la reutilización de código y reduciendo los tiempos de desarrollo. Así es que los sistemas operativos basados en UNIX, el sistema BSD, el sistema GNU/Linux y muchos otros fueron desarrollados en C.
-
-Con el paso del tiempo, C se ha convertido en el lenguaje más trascendente de la historia de la informática. Se han desarrollado cientos de bibliotecas que permiten a los programadores de C utilizar el código desarrollado por otros para la realización de tareas comunes. Esto, a su vez, ha propiciado el desarrollo de infinidad de aplicaciones y herramientas en lenguaje C.

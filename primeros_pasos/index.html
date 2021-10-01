@@ -94,9 +94,53 @@
                     <div class="col-md-9" role="main">
 
 <h2 id="primeros-pasos">Primeros pasos</h2>
-<p>En este capítulo veremos un resumido listado de conceptos básicos, esta
-información puede encontrarse en forma más elaborada en el WikiLibro
-<a href="Fundamentos_de_programación" title="wikilink">Fundamentos de programación</a>.</p></div>
+<h3 id="primer-programa-en-c">Primer programa en C</h3>
+<p>Es tradicional empezar a aprender un lenguaje de programación con un ejemplo que imprima en pantalla un mensaje de saludo «<a href="https://es.wikipedia.org/wiki/Hola_mundo">hola mundo</a>».</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hola mundo!\n");
+    return 0;
+}
+</code></pre>
+<p>Analizaremos brevemente este programa.</p>
+<p>Es probable que lo primero que salte a la vista sea la línea:</p>
+<pre><code>    printf("Hola mundo!\n");
+</code></pre>
+<p>Esta es la línea que hace aparecer la cadena de caracteres <code>Hola Mundo</code> en nuestra pantalla. Notamos que para imprimir algo por pantalla es podemos usar la <strong>sentencia</strong> (la <em>orden</em>) <code>printf()</code> escribiendo entre paréntesis lo que deseemos imprimir.</p>
+<p>El utilizar paréntesis se debe a que en C, <code>printf</code> es una <strong>función</strong>, que imprime su <strong>argumento</strong> (la cadena <code>Hola Mundo\n</code>) en la pantalla.  Se denomina <em>invocar</em> o <em>llamar</em> a una función a la acción de utilizarla para que realice una acción</p>
+<p>Podemos observar también que la cadena a imprimir termina con una extraña combinación: <code>\n</code>. La combinación <code>\n</code> no representa a dos caracteres independientes, sino que a un único carácter no imprimible: el salto de línea. En este caso, se utiliza, después del texto <code>Hola Mundo</code> se pasar a la siguiente línea en la pantalla.</p>
+<p>Lo último a resaltar es que la línea termina con un punto y coma. En C, todas las sentencias terminan con un punto y coma.</p>
+<p>Esta línea está dentro de un bloque de código:</p>
+<pre><code>int main ()
+{
+    ...
+}
+</code></pre>
+<p>Las llaves delimitan un bloque, es decir, un grupo de sentencias que se ejecutarán de forma secuencial. La línea previa</p>
+<pre><code>int main ()
+</code></pre>
+<p>indica la definición de una función, en este caso llamada <strong><code>main</code></strong>. El lenguaje C (y en general en todos los lenguajes de programación estructurada) se fundamenta en la definición de funciones que realizan tareas específicas.
+La función <code>main</code> es especial, porque es el la que se invoca cuando se ejecuta el programa.</p>
+<p>Observemos ahora la última sentencia de la función <code>main</code>:</p>
+<pre><code>return 0;
+</code></pre>
+<p>Esta orden finaliza de la función <code>main</code> (y, por tanto, <strong>finaliza el programa</strong>) y devuelve un valor numérico, <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> (que será interpretado por el sistema operativo para saber que el programa ha funcionado bien, sin fallos).</p>
+<p>Pues es la definición de una función, en este caso llamada main. En C (y en general en todos los lenguajes de programación estructurada) todo se hace a base de funciones, como main y printf.</p>
+<p>La función main es especial, porque es el la que se invoca cuando se ejecuta el programa. Todos los programas en C comienzan su ejecución al principio de la función main, y cuando ésta acaba, el programa también.</p>
+<p>Veamos con más detalle la definición de la función:</p>
+<pre><code>int main ()
+{
+    ...
+}
+</code></pre>
+<p>El nombre de la función que viene a continuación, entre llaves, es main.</p>
+<p>La función devuelve como resultado un número entero, int (que es el 0 de la instrucción return).[2]</p>
+<p>Finalmente, y un tanto aparte (está separada del resto por una línea en blanco), tenemos la línea</p>
+<pre><code>#include &lt;stdio.h&gt;
+</code></pre>
+<p>Esta línea es una instrucción del preprocesador de C, como nos lo indica el símbolo <code>#</code>, y lo que hace es incluir en ese punto el contenido del fichero <code>stdio.h</code> que es el que contiene la definición de la función <code>printf()</code>, que antes utilizamos (pero que no hemos programado). Esta función  forma parte de la <a href="https://es.wikipedia.org/wiki/Biblioteca_est%C3%A1ndar_de_C">biblioteca estándar de C</a>.</p></div>
             </div>
         </div>
 
