@@ -1,6 +1,8 @@
 ## Fundamentos de programación
 
-### ¿Qué es un algoritmo?
+En esta sección se introducen de forma breve conceptos que serán útiles más adelante.
+
+### Algoritmos
 
 Sin entrar en una definición más precisa, entenderemos por [algoritmo](https://es.wikipedia.org/wiki/Algoritmo) a un conjunto de pasos, instrucciones o acciones lógicas que se deben seguir para resolver un problema, de forma que:
 
@@ -26,21 +28,22 @@ Un algoritmo es independiente del lenguaje de ordenador o la máquina donde se i
 
 ### Lenguajes de ordenador
 
-- El **[lenguaje de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_máquina)** es el único lenguaje que la computadora es capaz de ejecutar. Consiste en una serie de instrucciones de básicas de control que se almacenan en la [memoria del ordenador](https://es.wikipedia.org/wiki/Memoria_(inform%C3%A1tica)) (en forma de dígitos binarios) y que la [unidad central de procesamiento](https://es.wikipedia.org/wiki/Unidad_central_de_procesamiento) (la CPU) puede ejecutar directamente.
+- El **[lenguaje de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_máquina)** consiste en una serie de instrucciones de básicas de control que se almacenan en la [memoria del ordenador](https://es.wikipedia.org/wiki/Memoria_(inform%C3%A1tica)) (como secuencias de dígitos binarios $\{0,1\}$) y que la [unidad central de procesamiento](https://es.wikipedia.org/wiki/Unidad_central_de_procesamiento) (la CPU) puede *ejecutar directamente*. Podríamos decir que es «el único lenguaje que entiende el ordenador».
 
 <!-- end list -->
 
   - Los **[lenguajes de
-    programación](https://es.wikipedia.org/wiki/Lenguaje_de_programación)** son el
-    medio de comunicación entre el programador y una computadora. El
-    programador escribe en algún lenguaje de programación y utiliza las
-    herramientas previstas por ese lenguaje para transformarlo en
-    lenguaje de máquina.
+    programación](https://es.wikipedia.org/wiki/Lenguaje_de_programación)**
+    son el medio de comunicación entre el programador y una
+    computadora. El programador escribe los algoritmos en algún
+    lenguaje de programación y utiliza las herramientas previstas por
+    ese lenguaje para transformarlo en lenguaje de máquina, ejecutable
+    por el ordenador.
 
 <!-- end list -->
 
 
-Además de según los distintos modelos o [paradigmas de programación](https://es.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3n)  (imperativa, declarativa, orientada a objetos, etc), los lenguajes de programación se pueden clasificar como sigue.
+Además de etiquetarse según distintos estilos o [paradigmas de programación](https://es.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3n)  (imperativa, declarativa, orientada a objetos, etc), los lenguajes de programación se pueden clasificar como sigue:
 
 ##### Alto o bajo nivel
 
@@ -53,10 +56,13 @@ permite optimizar al máximo los recursos de la máquina. Por ende, esto
 también hace que la dificultad y que los errores que se puedan cometer
 programando aumenten. Así, con frecuencia, a C se le considera de nivel medio.
 
+
 Lenguajes de **más alto nivel que C** son aquellos en los que el
 programador no necesita encargarse de manipular directamente el
-hardware, en particular la memoria. Algunos lenguajes de alto nivel
-muy usados en métodos numéricos:
+s de más alto nivel y añade éste capacidades para la orientación a objetos y otros paradigmas.
+
+Otros lenguajes de alto nivel (todos de mayor nivel que *C*)
+muy usados en métodos numéricos son:
 **[Matlab](https://es.wikipedia.org/wiki/MATLAB)/[Octave](https://es.wikipedia.org/wiki/GNU_Octave)**,
 **[Python](https://es.wikipedia.org/wiki/Python)**, **[Fortran](https://es.wikipedia.org/wiki/Fortran)**, **[Julia](https://es.wikipedia.org/wiki/Julia_(lenguaje_de_programaci%C3%B3n))**.
 **[Mathematica](https://es.wikipedia.org/wiki/Mathematica)** y **[R](https://es.wikipedia.org/wiki/R_(lenguaje_de_programaci%C3%B3n))** son lenguajes muy usados en matemáticas y estadística y, con frecuencia, también en métodos numéricos.
