@@ -29,7 +29,7 @@ Podemos observar también que la cadena a imprimir termina con una extraña comb
 Lo último a resaltar es que la línea termina con un punto y coma. En C, todas las sentencias terminan con un punto y coma.
 
 
-Esta línea está dentro de un bloque de código:
+En el ejemplo, la función `printf` es invocada desde de un bloque de código de la forma:
 
 
     int main ()

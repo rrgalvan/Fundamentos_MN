@@ -35,14 +35,19 @@ Contar con un lenguaje de alto nivel permitió el avance de los sistemas operati
 
 Con el paso del tiempo, C se ha convertido en el lenguaje más trascendente de la historia de la informática. Se han desarrollado cientos de bibliotecas que permiten a los programadores de C utilizar el código desarrollado por otros para la realización de tareas comunes. Esto, a su vez, ha propiciado el desarrollo de infinidad de aplicaciones y herramientas en lenguaje C.
 
-## Características del lenguaje C
+De forma resumida (más sobre ello en la sección «[Fundamentos](fundamentos.md)»):
 
-- C es un lenguaje de medio o relativamente [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel), es decir, el código C es relativamente cercano al lenguaje máquina (respecto al lenguaje humano o a lenguajes de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel)).
-- Es un [lenguaje compilado](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado), es decir requiere de un [compilador](https://es.wikipedia.org/wiki/Compilador) (traductor que genera [código de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina) a partir del [código fuente](https://es.wikipedia.org/wiki/C%C3%B3digo_fuente)). El programa ya compilado puede ejecutarse directamente en la máquina.
+- C es un lenguaje de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel)) (cercano al lenguaje humano) aunque posee características de [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel) (cercanas al [código de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina)).
+- Es un [lenguaje compilado](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado), es decir requiere de un [compilador](https://es.wikipedia.org/wiki/Compilador) para generar un fichero con código ejecutable por la máquina.
 - Estas características hacen que el código resultante de la programación en lenguaje C sea mucho *más rápido que otros lenguajes* de mayor nivel como [Python](https://www.python.org/) o [Matlab](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/index): lenguajes usados con frecuencia en cálculo numérico, pero que son de tipo [interpretado](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)), no compilado.
-- Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python o Matlab/Octave.
+- Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python, Matlab/Octave o [Mathematica](https://es.wikipedia.org/wiki/Mathematica).
 
+## ¿Qué son los Métodos Numéricos?
+
+De forma muy genérica, podríamos definir a los *Métodos Numéricos* como la rama de las *Matemáticas* que analiza y construye algoritmos para resolver problemas ***de forma aproximada***. Estos algoritmos suelen requerir grandes cálculos y son implementados como programas de ordenador y, de hecho, la eclosión de la informática ha producido un enorme avance en esta rama de las matemáticas.
+
+Es importante enfatizar que ***de forma aproximada no significa poco precisa*** o con *poco rigor*. De hecho, en métodos numéricos es fundamental establecer resultados que garanticen el buen planteamiento de los *problemas aproximados* y la *convergencia* de las soluciones aproximadas hacia la «*solucion exacta*» del problema considerado. De forma que sea posible el cálculo de soluciones aproximadas  «***tan cercanas a la solución exacta como desemos***», siempre que dispongamos de suficiente *potencia de cálculo* para ello.
 
 ## Acerca de
 
-Se otorga permiso para copiar y reutilizar este material bajo los términos de las licencias libre [GFDL](https://es.wikipedia.org/wiki/Licencia_de_documentaci%C3%B3n_libre_de_GNU) o [Creative Commons Compartir-Igual 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es). Véase el fichero [about.md](about.md)
+Este documento ha sido creado como apoyo a las asignaturas *Métodos Numéricos I* y *Métodos Numéricos II* del [Grado en Matemáticas de la Unviersidad de Cádiz](https://ciencias.uca.es/matematicas). Puede accederse a todo el material en el repositorio [https://github.com/rrgalvan/curso-c-numerico](https://github.com/rrgalvan/curso-c-numerico). Se otorga permiso para copiar y reutilizar este material bajo los términos de las licencias libre [GFDL](https://es.wikipedia.org/wiki/Licencia_de_documentaci%C3%B3n_libre_de_GNU) o [Creative Commons Compartir-Igual 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es). Véase el fichero [about.md](about.md)
