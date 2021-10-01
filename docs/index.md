@@ -33,7 +33,7 @@ Contar con un lenguaje de alto nivel permitió el avance de los sistemas operati
 
 Con el paso del tiempo, C se ha convertido en el lenguaje más trascendente de la historia de la informática. Se han desarrollado cientos de bibliotecas que permiten a los programadores de C utilizar el código desarrollado por otros para la realización de tareas comunes. Esto, a su vez, ha propiciado el desarrollo de infinidad de aplicaciones y herramientas en lenguaje C.
 
-De forma resumida (más sobre ello en la sección «[Fundamentos](fundamentos.md)»):
+De forma resumida (más sobre ello a continuación):
 
 - C es un lenguaje de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel)) (cercano al lenguaje humano) aunque posee características de [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel) (cercanas al [código de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina)).
 - Es un [lenguaje compilado](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado), es decir requiere de un [compilador](https://es.wikipedia.org/wiki/Compilador) para generar un fichero con código ejecutable por la máquina.
