@@ -1,0 +1,108 @@
+### Estructura de la memoria de un ordenador
+
+Parte de esta potencia de C viene de que permite acceder con mucha
+libertad a la memoria de la máquina. Para entender un poco cómo es
+posible, debemos entender cómo se guardan los datos en la memoria.
+
+Imaginemos que la memoria tiene un montón de casillas, una enorme fila
+de casillas, cada una de las cuales contiene un [dígito binario
+(bit)](https://es.wikipedia.org/wiki/Bit):
+
+0101001010100001010101001010000100111010110010010101001011010110001101010110101010110111...
+
+Es exactamente así, pero es más cómodo recordar que esos bits se
+encuentran agrupados de ocho en ocho, formando [octetos
+(bytes)](https://es.wikipedia.org/wiki/Byte):
+
+<table cellpading=2>
+<tbody>
+<tr class="odd">
+<td><p>01010010</p></td>
+<td><p>10100001</p></td>
+<td><p>01010100</p></td>
+<td><p>10100001</p></td>
+<td><p>00111010</p></td>
+<td><p>11001001</p></td>
+<td><p>01010010</p></td>
+<td><p>11010110</p></td>
+<td><p>00110101</p></td>
+<td><p>01101010</p></td>
+<td><p>10110111</p></td>
+<td><p>...</p></td>
+</tr>
+</tbody>
+</table>
+
+##### Caracteres
+
+Cada octeto puede contener \(2^8=256\) combinaciones distintas de ceros
+y unos, es decir, cualquier número entre 0 y 255:
+
+<table>
+<tbody>
+<tr>G
+<td><p>82</p></td>
+<td><p>161</p></td>
+<td><p>84</p></td>
+<td><p>161</p></td>
+<td><p>58</p></td>
+<td><p>201</p></td>
+<td><p>82</p></td>
+<td><p>214</p></td>
+<td><p>181</p></td>
+<td><p>106</p></td>
+<td><p>183</p></td>
+<td><p>...</p></td>
+</tr>
+</tbody>
+</table>
+
+También podemos representar estos números en [base hexadecimal](https://es.wikipedia.org/wiki/Sistema_hexadecimal):
+
+<table>
+<tbody>
+<tr class="odd">
+<td><p>0x52</p></td>
+<td><p>0xA1</p></td>
+<td><p>0x54</p></td>
+<td><p>0xA1</p></td>
+<td><p>0x3A</p></td>
+<td><p>0xC9</p></td>
+<td><p>0x52</p></td>
+<td><p>0xD6</p></td>
+<td><p>0x35</p></td>
+<td><p>0x6A</p></td>
+<td><p>0xB7</p></td>
+<td><p>...</p></td>
+</tr>
+</tbody>
+</table>
+
+O considerarlos caracteres, mediante alguna
+[codificación](https://es.wikipedia.org/wiki/Codificación_de_caracteres):
+
+<table>
+<tbody>
+<tr class="odd">
+<td><p>R</p></td>
+<td><p>¡</p></td>
+<td><p>T</p></td>
+<td><p>¡</p></td>
+<td><p>:</p></td>
+<td><p>É</p></td>
+<td><p>R</p></td>
+<td><p>Ö</p></td>
+<td><p>5</p></td>
+<td><p>j</p></td>
+<td><p>·</p></td>
+<td><p>...</p></td>
+</tr>
+</tbody>
+</table>
+
+Este es el tipo de dato más elemental que nos podemos encontrar en C: el
+**caracter**. Un caracter ocupa exactamente un byte (8 bits) de memoria, y
+puede contener un número entre 0 y 255, o entre -128 y 127, dependiendo
+si queremos considerarlo como un valor sin signo o con él.
+
+Pero, ¿y si consideramos tipos de datos que ocupen 2 bytes (16 bits), 4 bytes (32 bits, etc? Hablaremos de tipos de datos en C...

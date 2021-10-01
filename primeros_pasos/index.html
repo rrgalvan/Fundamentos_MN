@@ -94,8 +94,41 @@
                     <div class="col-md-9" role="main">
 
 <h2 id="primeros-pasos">Primeros pasos</h2>
+<h3 id="instalacion-de-un-entorno-de-desarrollo-en-c">Instalación de un entorno de desarrollo en C</h3>
+<p>Para empezar a programar, necesitarás un entorno de desarrollo que, como mínimo, conste de un <strong>editor</strong> para escribir el código fuente y un <strong>compilador</strong> para transformarlo en código máquina o ejecutable. Los editores especializados ofrecen la opción de llamar al compilador para realizar el proceso de compilación y ejecución del código.</p>
+<p>Existen numerosas alternativas con <a href="https://es.wikipedia.org/wiki/Contenido_libre">licencia libre</a> como <a href="https://es.wikipedia.org/wiki/Dev-C%2B%2B">Dev-C++</a> o <a href="https://es.wikipedia.org/wiki/Code::Blocks">Code::Blocks</a>, editores que usualmente se integran con el compilador <strong>gcc</strong>.</p>
+<p>Existe otra alternativa, de la que hablaremos a continuación: el editor <a href="https://es.wikipedia.org/wiki/Atom_(software)">Atom</a> y su integración con <em>gcc</em>.</p>
+<h4 id="el-compilador-gcc">El compilador <em>gcc</em></h4>
+<p>Este compilador, que es parte de la *<a href="https://es.wikipedia.org/wiki/GNU_Compiler_Collection">colección de compiladores de GNU</a> (junto a otros como <code>g++</code>, compilador de C++):</p>
+<ul>
+<li>
+<p>Está disponible directamente en los sistemas <strong>GNU/Linux</strong>.</p>
+</li>
+<li>
+<p>En <strong>MacOS</strong> se requiere la instalación de <a href="https://apps.apple.com/es/app/xcode/id497799835?mt=12">Xcode</a>, disponible directamente en la <em>Mac App Store</em>.</p>
+</li>
+<li>
+<p>En <strong>Windows</strong>, basta instalar <a href="https://es.wikipedia.org/wiki/MinGW">MinGW</a>, un proyecto para portar a plataformas Windows la familia de compiladores de GNU. Para instarlo, basta <a href="https://www.mingw-w64.org/downloads/">descargarlo de su página web</a>.  Además, deberás asegurarse de que la carpeta donde se haya instalado el programa <em>gcc</em> haya sido añadida a la variable de sistema <em>PATH</em>. <strong>Es fácil, <a href="https://www.youtube.com/watch?v=sXW2VLrQ3Bs">puedes ver los detalles (por ejemplo) en este <em>tutorial</em></a></strong></p>
+</li>
+</ul>
+<h4 id="atom">Atom</h4>
+<p>Atom es un editor de código fuente disponible con licencia libre para Windows, MacOS, GNU/Linux. Es un editor moderno y con características avanzadas, como el soporte de paquetes (extensiones). Mediante paquetes, Atom soporta prácticamente cualquier lenguaje de programación conocido. Entre ellos, nos resultará muy útil el paquete <a href="https://atom.io/packages/gpp-compiler"><code>gpp-compiler</code></a>.</p>
+<ul>
+<li>Para la <strong>instalación</strong>, es suficiente descargar el programa de su <a href="https://atom.io/">página
+web</a> y proceder de la forma habitual en cada sistema
+operativo.</li>
+<li>
+<p>Una vez instalado el editor, añadimos el paquete <a href="https://atom.io/packages/gpp-compiler"><code>gpp-compiler</code></a>, que permitirá iniciar el proceso de compilación (y ejecución del programa) directamente desde el editor.</p>
+</li>
+<li>
+<p><strong><a href="https://www.youtube.com/watch?v=9aneqcQD1Gs">Puedes ver los detalles de la instalación en este <em>tutorial</em></a></strong> (centrado en Windows, pero generalizable al resto de sistemas operativos).</p>
+</li>
+</ul>
 <h3 id="primer-programa-en-c">Primer programa en C</h3>
-<p>Es tradicional empezar a aprender un lenguaje de programación con un ejemplo que imprima en pantalla un mensaje de saludo «<a href="https://es.wikipedia.org/wiki/Hola_mundo">hola mundo</a>».</p>
+<p>Con nuestro entorno de desarrollo preparado, podemos escribir nuestro
+primer programa en C.  Es tradicional empezar a aprender un lenguaje
+de programación con un ejemplo que imprima en pantalla un mensaje de
+saludo «<a href="https://es.wikipedia.org/wiki/Hola_mundo">hola mundo</a>».</p>
 <pre><code>#include &lt;stdio.h&gt;
 
 int main()
@@ -113,34 +146,34 @@ int main()
 <p>Podemos observar también que la cadena a imprimir termina con una extraña combinación: <code>\n</code>. La combinación <code>\n</code> no representa a dos caracteres independientes, sino que a un único carácter no imprimible: el salto de línea. En este caso, se utiliza, después del texto <code>Hola Mundo</code> se pasar a la siguiente línea en la pantalla.</p>
 <p>Lo último a resaltar es que la línea termina con un punto y coma. En C, todas las sentencias terminan con un punto y coma.</p>
 <p>En el ejemplo, la función <code>printf</code> es invocada desde de un bloque de código de la forma:</p>
-<pre><code>int main ()
+<pre><code>int main()
 {
     ...
 }
 </code></pre>
 <p>Las llaves delimitan un bloque, es decir, un grupo de sentencias que se ejecutarán de forma secuencial. La línea previa</p>
-<pre><code>int main ()
+<pre><code>int main()
 </code></pre>
-<p>indica la definición de una función, en este caso llamada <strong><code>main</code></strong>. El lenguaje C (y en general en todos los lenguajes de programación estructurada) se fundamenta en la definición de funciones que realizan tareas específicas.
+<p>indica la definición de una función, en este caso llamada <strong><code>main</code></strong>. El lenguaje C (y en general en todos los lenguajes de <a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n_estructurada">programación estructurada</a>) se fundamenta en la definición de funciones que realizan tareas específicas.
 La función <code>main</code> es especial, porque es el la que se invoca cuando se ejecuta el programa.</p>
 <p>Observemos ahora la última sentencia de la función <code>main</code>:</p>
 <pre><code>return 0;
 </code></pre>
-<p>Esta orden finaliza de la función <code>main</code> (y, por tanto, <strong>finaliza el programa</strong>) y devuelve un valor numérico, <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> (que será interpretado por el sistema operativo para saber que el programa ha funcionado bien, sin fallos).</p>
+<p>Esta orden finaliza  la función <code>main</code> (y, por tanto, <strong>finaliza el programa</strong>) y devuelve un valor numérico entero (de ahí la expresión <em><code>int</code></em> previa a <code>main</code>), en este caso <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> (que será interpretado por el sistema operativo para saber que el programa ha funcionado bien, sin fallos).</p>
 <p>Pues es la definición de una función, en este caso llamada main. En C (y en general en todos los lenguajes de programación estructurada) todo se hace a base de funciones, como main y printf.</p>
 <p>La función main es especial, porque es el la que se invoca cuando se ejecuta el programa. Todos los programas en C comienzan su ejecución al principio de la función main, y cuando ésta acaba, el programa también.</p>
 <p>Veamos con más detalle la definición de la función:</p>
-<pre><code>int main ()
+<pre><code>int main()
 {
     ...
 }
 </code></pre>
 <p>El nombre de la función que viene a continuación, entre llaves, es main.</p>
 <p>La función devuelve como resultado un número entero, int (que es el 0 de la instrucción return).[2]</p>
-<p>Finalmente, y un tanto aparte (está separada del resto por una línea en blanco), tenemos la línea</p>
+<p>Finalmente, centramos la atención a la línea situada al principio del programa, y un tanto aparte (está separada del resto por una línea en blanco):</p>
 <pre><code>#include &lt;stdio.h&gt;
 </code></pre>
-<p>Esta línea es una instrucción del preprocesador de C, como nos lo indica el símbolo <code>#</code>, y lo que hace es incluir en ese punto el contenido del fichero <code>stdio.h</code> que es el que contiene la definición de la función <code>printf()</code>, que antes utilizamos (pero que no hemos programado). Esta función  forma parte de la <a href="https://es.wikipedia.org/wiki/Biblioteca_est%C3%A1ndar_de_C">biblioteca estándar de C</a>.</p></div>
+<p>Se trata de una instrucción del preprocesador de C, como nos lo indica el símbolo <code>#</code>, y lo que hace es incluir en ese punto el contenido del fichero <code>stdio.h</code> que es el que contiene la definición de la función <code>printf()</code>, que hemos utilizado en nuestro programa. Esta función, <code>printf()</code> forma parte de la <a href="https://es.wikipedia.org/wiki/Biblioteca_est%C3%A1ndar_de_C">biblioteca estándar de C</a>.</p></div>
             </div>
         </div>
 
