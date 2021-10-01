@@ -5,9 +5,9 @@ Curso de introducción al lenguaje C orientado a los métodos y la simulación n
 Este curso pretende ofrecer de forma simple y clara una **introducción rápida a la programación con el lenguaje C**. El objetivo es no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para una persona que se inicia en ester lenguaje *para su uso en matemáticas* y, concretamente, para la implementación de **algoritmos relacionados con el cálculo y los *métodos numéricos***. Se presentan numerosos ejemplos siempre ilustrando conceptos relacionados con esta temática, acompañados con los conocimientos matemáticos mínimos para comprenderlos.
 
 
-## ¿Para quién es este libro?
+## ¿A quién se dirige este documento?
 
-Este libro está realizado pensando en estudiantes del Grado en Matemáticas de la Universidad de Cádiz pero dirigido a toda persona que desee obtener unos conocimientos básicos en programación en lenguaje C para algoritmos/asignaturas relacionados con las matemáticas, en especial con los métodos numéricos y la simulación numéricas para desarrolladores de software numérico. Por supuesto, se recomienda las personas interesadas el profundizar en el futuro en estos temas, realizando cursos o consultando bibliografía. Algunos clásicos:
+Este documento ha sido realizado pensando en estudiantes de Métodos Numéricos en el Grado en Matemáticas de la Universidad de Cádiz, pero está dirigido a toda persona que desee obtener conocimientos básicos en programación en lenguaje C y herramientas matemáticas básicas para ser usados en algoritmos/asignaturas relacionados con las matemáticas, en especial con los métodos numéricos y la simulación numéricas. Por supuesto, se recomienda las personas interesadas el profundizar en el futuro en estos temas, realizando cursos o consultando bibliografía como:
 
 
     H. Schildt, C. Guía de autoenseñanza
@@ -22,9 +22,7 @@ Puedes...
 
 - [acceder al curso a través de internet](https://rrgalvan.github.io/curso-c-numerico) o bien
 
-- [descargarlo de este repositorio *git*](https://github.com/rrgalvan/curso-c-numerico).
-
-En el último caso (si te interesa acceder al contenido del repositorio) podrás visualizar los ficheros de tipo *[Markdown](https://es.wikipedia.org/wiki/Markdown)* situados en el directorio `docs` utilizando [MkDocs](https://www.mkdocs.org) o cualquier visor de *Markdown*.
+- [descargarlo de este repositorio *git*](https://github.com/rrgalvan/curso-c-numerico). En este caso podrás visualizar localmente los ficheros de tipo *[Markdown](https://es.wikipedia.org/wiki/Markdown)* situados en el directorio `docs`, utilizando [MkDocs](https://www.mkdocs.org) o cualquier visor de *Markdown*. Deberás instalar [pymdown-extensions](https://www.google.com/search?channel=fs&q=pip+install+pymdown-extensions) (extensiones *Markdwon* para *Python*) para visualizar expresiones matemáticas.
 
 
 ## ¿Qué es el lenguaje C?
