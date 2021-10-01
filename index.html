@@ -98,7 +98,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#caracteristicas-del-lenguaje-c" class="nav-link">Características del lenguaje C</a>
+            <li class="nav-item" data-level="2"><a href="#que-son-los-metodos-numericos" class="nav-link">¿Qué son los Métodos Numéricos?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -139,15 +139,18 @@ Addison-Wesley-Iberoamericana 1994
 <p>El <a href="https://es.wikipedia.org/wiki/C_(lenguaje_de_programaci%C3%B3n)">lenguaje de programación C</a> fue creado por Dennis Ritchie entre 1969 y 1973 cuando trabajaba en Bell Laboratories de AT&amp;T junto con Ken Thompson en el diseño del sistema operativo UNIX. C fue creado para poder escribir dicho sistema operativo en un lenguaje de alto nivel, independiente del hardware donde se ejecutara.</p>
 <p>Contar con un lenguaje de alto nivel permitió el avance de los sistemas operativos, ya que el mismo código podía ser utilizado en las distintas plataformas, propiciando la reutilización de código y reduciendo los tiempos de desarrollo. Así es que los sistemas operativos basados en UNIX, el sistema BSD, el sistema GNU/Linux y muchos otros fueron desarrollados en C.</p>
 <p>Con el paso del tiempo, C se ha convertido en el lenguaje más trascendente de la historia de la informática. Se han desarrollado cientos de bibliotecas que permiten a los programadores de C utilizar el código desarrollado por otros para la realización de tareas comunes. Esto, a su vez, ha propiciado el desarrollo de infinidad de aplicaciones y herramientas en lenguaje C.</p>
-<h2 id="caracteristicas-del-lenguaje-c">Características del lenguaje C</h2>
+<p>De forma resumida (más sobre ello en la sección «<a href="fundamentos/">Fundamentos</a>»):</p>
 <ul>
-<li>C es un lenguaje de medio o relativamente <a href="https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel">bajo nivel</a>, es decir, el código C es relativamente cercano al lenguaje máquina (respecto al lenguaje humano o a lenguajes de <a href="https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel">alto nivel</a>).</li>
-<li>Es un <a href="https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado">lenguaje compilado</a>, es decir requiere de un <a href="https://es.wikipedia.org/wiki/Compilador">compilador</a> (traductor que genera <a href="https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina">código de máquina</a> a partir del <a href="https://es.wikipedia.org/wiki/C%C3%B3digo_fuente">código fuente</a>). El programa ya compilado puede ejecutarse directamente en la máquina.</li>
+<li>C es un lenguaje de <a href="https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel">alto nivel</a>) (cercano al lenguaje humano) aunque posee características de <a href="https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel">bajo nivel</a> (cercanas al <a href="https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina">código de máquina</a>).</li>
+<li>Es un <a href="https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado">lenguaje compilado</a>, es decir requiere de un <a href="https://es.wikipedia.org/wiki/Compilador">compilador</a> para generar un fichero con código ejecutable por la máquina.</li>
 <li>Estas características hacen que el código resultante de la programación en lenguaje C sea mucho <em>más rápido que otros lenguajes</em> de mayor nivel como <a href="https://www.python.org/">Python</a> o <a href="https://www.mathworks.com/products/matlab.html">Matlab</a>/<a href="https://www.gnu.org/software/octave/index">Octave</a>: lenguajes usados con frecuencia en cálculo numérico, pero que son de tipo <a href="https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)">interpretado</a>, no compilado.</li>
-<li>Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python o Matlab/Octave.</li>
+<li>Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python, Matlab/Octave o <a href="https://es.wikipedia.org/wiki/Mathematica">Mathematica</a>.</li>
 </ul>
+<h2 id="que-son-los-metodos-numericos">¿Qué son los Métodos Numéricos?</h2>
+<p>De forma muy genérica, podríamos definir a los <em>Métodos Numéricos</em> como la rama de las <em>Matemáticas</em> que analiza y construye algoritmos para resolver problemas <strong><em>de forma aproximada</em></strong>. Estos algoritmos suelen requerir grandes cálculos y son implementados como programas de ordenador y, de hecho, la eclosión de la informática ha producido un enorme avance en esta rama de las matemáticas.</p>
+<p>Es importante enfatizar que <strong><em>de forma aproximada no significa poco precisa</em></strong> o con <em>poco rigor</em>. De hecho, en métodos numéricos es fundamental establecer resultados que garanticen el buen planteamiento de los <em>problemas aproximados</em> y la <em>convergencia</em> de las soluciones aproximadas hacia la «<em>solucion exacta</em>» del problema considerado. De forma que sea posible el cálculo de soluciones aproximadas  «<strong><em>tan cercanas a la solución exacta como desemos</em></strong>», siempre que dispongamos de suficiente <em>potencia de cálculo</em> para ello.</p>
 <h2 id="acerca-de">Acerca de</h2>
-<p>Se otorga permiso para copiar y reutilizar este material bajo los términos de las licencias libre <a href="https://es.wikipedia.org/wiki/Licencia_de_documentaci%C3%B3n_libre_de_GNU">GFDL</a> o <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">Creative Commons Compartir-Igual 3.0</a>. Véase el fichero <a href="about/">about.md</a></p></div>
+<p>Este documento ha sido creado como apoyo a las asignaturas <em>Métodos Numéricos I</em> y <em>Métodos Numéricos II</em> del <a href="https://ciencias.uca.es/matematicas">Grado en Matemáticas de la Unviersidad de Cádiz</a>. Puede accederse a todo el material en el repositorio <a href="https://github.com/rrgalvan/curso-c-numerico">https://github.com/rrgalvan/curso-c-numerico</a>. Se otorga permiso para copiar y reutilizar este material bajo los términos de las licencias libre <a href="https://es.wikipedia.org/wiki/Licencia_de_documentaci%C3%B3n_libre_de_GNU">GFDL</a> o <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">Creative Commons Compartir-Igual 3.0</a>. Véase el fichero <a href="about/">about.md</a></p></div>
             </div>
         </div>
 
@@ -230,5 +233,5 @@ Addison-Wesley-Iberoamericana 1994
 
 <!--
 MkDocs version : 1.2.2
-Build Date UTC : 2021-10-01 15:32:53.903506+00:00
+Build Date UTC : 2021-10-01 16:53:28.977405+00:00
 -->
