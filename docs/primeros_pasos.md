@@ -1,6 +1,6 @@
 # Fundamentos y Primeros Pasos
 
-En esta sección se introducen de forma breve conceptos que serán útiles más adelante.
+En esta sección se introducen algunas definiciones sobre conceptos relacionados con el lenguaje C y los algoritmos numéricos. Se ofrecen algunas sugerencias para instalar un entorno de desarrollo en C y se introduce un primer ejemplo de este lenguaje.
 
 ## Algoritmos
 
@@ -114,10 +114,8 @@ Este compilador, que es parte de la *[colección de compiladores de GNU](https:/
 
 * En **MacOS** se requiere la instalación de [Xcode](https://apps.apple.com/es/app/xcode/id497799835?mt=12), disponible directamente en la *Mac App Store*.
 
-* En **Windows**, basta instalar [MinGW](https://es.wikipedia.org/wiki/MinGW), un proyecto para portar a plataformas Windows la familia de compiladores de GNU. Para instarlo, basta [descargarlo de su página web](https://www.mingw-w64.org/downloads/).  Además, deberás asegurarse de que la carpeta donde se haya instalado el programa *gcc* haya sido añadida a la variable de sistema *PATH*. **Es fácil, [puedes ver los detalles (por ejemplo) en este *tutorial*](https://www.youtube.com/watch?v=sXW2VLrQ3Bs)**
-
-
-
+* En **Windows**, basta instalar [MinGW](https://es.wikipedia.org/wiki/MinGW), un proyecto para portar a plataformas Windows la familia de compiladores de GNU. Para instarlo, basta [descargarlo de su página web](https://www.mingw-w64.org/downloads/).  Además, deberás asegurarse de que la carpeta donde se haya instalado el programa *gcc* haya sido añadida a la variable de sistema *PATH*. **Es fácil, [puedes ver los detalles (por ejemplo) en este *tutorial*](https://www.youtube.com/watch?v=sXW2VLrQ3Bs)**:
+&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/sXW2VLrQ3Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Atom
 
@@ -128,8 +126,8 @@ web](https://atom.io/) y proceder de la forma habitual en cada sistema
 operativo.
 * Una vez instalado el editor, añadimos el paquete [`gpp-compiler`](https://atom.io/packages/gpp-compiler), que permitirá iniciar el proceso de compilación (y ejecución del programa) directamente desde el editor.
 
-* **[Puedes ver los detalles de la instalación en este *tutorial*](https://www.youtube.com/watch?v=9aneqcQD1Gs)** (centrado en Windows, pero generalizable al resto de sistemas operativos).
-
+* **[Puedes ver los detalles de la instalación en este *tutorial*](https://www.youtube.com/watch?v=9aneqcQD1Gs)** (centrado en Windows, pero generalizable al resto de sistemas operativos):
+&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/9aneqcQD1Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Primer programa en C
