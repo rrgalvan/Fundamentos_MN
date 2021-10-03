@@ -11,7 +11,7 @@ Sin entrar en una definición más precisa, entenderemos por [algoritmo](https:/
 
 Buena parte de los [métodos numéricos](https://es.wikipedia.org/wiki/An%C3%A1lisis_num%C3%A9rico) se centra en el desarrollo y análisis matemático de algoritmos para  calcular aproximaciones (tan exactas como deseemos) de la solución de problemas concretos.
 
-**Ejemplo**: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz de una función $f(x)$, es decir, un número $\alpha\in\mathbb R$ tal que $f(\alpha)=0$:
+**Ejemplo**: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz o cero de una función $f(x)$, es decir, un número $\alpha\in\mathbb R$ tal que $f(\alpha)=0$:
 
 - Datos de entrada: una función real de una variable, $f(x)$, su derivada, $f'(x)$, una estimación $x_0\in\mathbb R$, y el número máximo de iteraciones, $N\in\mathbb N$:
 
@@ -20,9 +20,9 @@ $$
 x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}
 $$
 
-Bajo determinadas hipótesis (por ejemplo, $f'\neq0$ «cerca de $\alpha$») se puede demostrar que $x_k \to \alpha$ y, para cualquier $k$, se puede estimar el error (la diferencia) entre $x_k$ y $\alpha$.
+El *análisis numérico* aplicado a este algoritmo nos garantizará que, bajo determinadas hipótesis (por ejemplo, $f'\neq0$ «cerca de $\alpha$») se tiene que $x_k \to \alpha$ (o sea, $\lim_{k\to +\infty} x_k = \alpha$). Más aún: para cualquier $k\in\mathbb N$, se puede estimar el error o diferencia entre $x_k$ y $\alpha$ (y por supuesto todo ello ¡sin saber cuál es el valor $\alpha$, la solución exacta!).
 
-Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos.
+Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos. Más adelante, programaremos en el algoritmo anterior en *lenguaje C* para calcular un cero de una función concreta.
 
 Un algoritmo es independiente del lenguaje de ordenador o la máquina donde se implemente.
 
@@ -114,8 +114,8 @@ Este compilador, que es parte de la *[colección de compiladores de GNU](https:/
 
 * En **MacOS** se requiere la instalación de [Xcode](https://apps.apple.com/es/app/xcode/id497799835?mt=12), disponible directamente en la *Mac App Store*.
 
-* En **Windows**, basta instalar [MinGW](https://es.wikipedia.org/wiki/MinGW), un proyecto para portar a plataformas Windows la familia de compiladores de GNU. Para instarlo, basta [descargarlo de su página web](https://www.mingw-w64.org/downloads/).  Además, deberás asegurarse de que la carpeta donde se haya instalado el programa *gcc* haya sido añadida a la variable de sistema *PATH*. **Es fácil, [puedes ver los detalles (por ejemplo) en este *tutorial*](https://www.youtube.com/watch?v=sXW2VLrQ3Bs)**:
-&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/sXW2VLrQ3Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+* En **Windows**, basta instalar **[MinGW](https://es.wikipedia.org/wiki/MinGW)**, un proyecto para portar a plataformas Windows la familia de compiladores de GNU. Para instarlo, basta [descargarlo de su página web](https://www.mingw-w64.org/downloads/).  Además, deberás asegurarse de que la carpeta donde se haya instalado el programa *gcc* haya sido añadida a la variable de sistema *PATH*. **Es fácil, [puedes ver los detalles (por ejemplo) en este *tutorial*](https://www.youtube.com/watch?v=sXW2VLrQ3Bs)**:
+<br/>&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/sXW2VLrQ3Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Atom
 
@@ -127,7 +127,7 @@ operativo.
 * Una vez instalado el editor, añadimos el paquete [`gpp-compiler`](https://atom.io/packages/gpp-compiler), que permitirá iniciar el proceso de compilación (y ejecución del programa) directamente desde el editor.
 
 * **[Puedes ver los detalles de la instalación en este *tutorial*](https://www.youtube.com/watch?v=9aneqcQD1Gs)** (centrado en Windows, pero generalizable al resto de sistemas operativos):
-&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/9aneqcQD1Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/> &nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/9aneqcQD1Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Primer programa en C
