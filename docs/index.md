@@ -1,4 +1,4 @@
-# Fundamentos de Métodos Numéricos.
+# Fundamentos de Métodos Numéricos
 
 Este curso pretende ofrecer de forma simple y clara un repaso a algunos de los **fundamentos requeridos para cursar asignaturas de métodos numéricos**. Se presentan numerosos ejemplos, siempre ilustrando conceptos relacionados con esta temática y acompañados con los conocimientos matemáticos mínimos para comprenderlos. Se acompaña de una **introducción rápida a la programación con el lenguaje C**. El objetivo es no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para programar los ejemplos y sentar su base para el uso en el futuro de este u otros lenguajes de programación en métodos numéricos.
 
@@ -8,11 +8,11 @@ Este curso pretende ofrecer de forma simple y clara un repaso a algunos de los *
 Este documento ha sido realizado pensando en estudiantes de Métodos Numéricos en el Grado en Matemáticas de la Universidad de Cádiz, pero está dirigido a toda persona interesada en la temática. Para profundizar en los métodos numéricos y en la programación en lenguaje C, se recomienda consultar bibliografía como:
 
 
-    H. Schildt, C. Guía de autoenseñanza
-    Osborne/McGraw-Hill, 2002
-
     Kincaid, D., Cheney, W., Análisis Numérico. Las matemáticas del cálculo científico.
     Addison-Wesley-Iberoamericana 1994
+
+    H. Schildt, C. Guía de autoenseñanza
+    Osborne/McGraw-Hill, 2002
 
 ## ¿Cómo puedo utilizar este material?
 
