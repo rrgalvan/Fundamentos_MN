@@ -22,6 +22,8 @@ Puedes...
 
 - [descargarlo de este repositorio *git*](https://github.com/rrgalvan/curso-c-numerico). En este caso podrás visualizar localmente los ficheros de tipo *[Markdown](https://es.wikipedia.org/wiki/Markdown)* situados en el directorio `docs`, utilizando [MkDocs](https://www.mkdocs.org) o cualquier visor de *Markdown*. Deberás instalar [pymdown-extensions](https://www.google.com/search?channel=fs&q=pip+install+pymdown-extensions) (extensiones *Markdwon* para *Python*) para visualizar expresiones matemáticas.
 
+El material aquí recogido tiene licencia libre, [aquí puedes leer más la licencia y los autores](about.md).
+
 ## ¿Qué son los Métodos Numéricos?
 
 De forma muy genérica, podríamos definir a los *Métodos Numéricos* como la rama de las *Matemáticas* que analiza y construye algoritmos para resolver problemas ***de forma aproximada***. Estos algoritmos suelen requerir grandes cálculos y son implementados como programas de ordenador y, de hecho, la eclosión de la informática ha producido un enorme avance en esta rama de las matemáticas.
@@ -43,7 +45,3 @@ De forma resumida (más sobre ello a continuación):
 - Es un [lenguaje compilado](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado), es decir requiere de un [compilador](https://es.wikipedia.org/wiki/Compilador) para generar un fichero con código ejecutable por la máquina.
 - Estas características hacen que el código resultante de la programación en lenguaje C sea mucho *más rápido que otros lenguajes* de mayor nivel como [Python](https://www.python.org/) o [Matlab](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/index): lenguajes usados con frecuencia en cálculo numérico, pero que son de tipo [interpretado](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)), no compilado.
 - Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python, Matlab/Octave o [Mathematica](https://es.wikipedia.org/wiki/Mathematica).
-
-## Acerca de
-
-Este documento ha sido creado como apoyo a las asignaturas *Métodos Numéricos I* y *Métodos Numéricos II* del [Grado en Matemáticas de la Unviersidad de Cádiz](https://ciencias.uca.es/matematicas). Puede accederse a todo el material en el repositorio [https://github.com/rrgalvan/curso-c-numerico](https://github.com/rrgalvan/curso-c-numerico). Se otorga permiso para copiar y reutilizar este material bajo los términos de las licencias libre [GFDL](https://es.wikipedia.org/wiki/Licencia_de_documentaci%C3%B3n_libre_de_GNU) o [Creative Commons Compartir-Igual 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es). Véase el fichero [about.md](about.md)
