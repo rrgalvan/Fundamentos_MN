@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Curso de C Numérico">
+        <meta name="description" content="Funamentos de Métodos Numéricos">
         <meta name="author" content="Rafa Rguez. Galván">
         
         <link rel="shortcut icon" href="img/favicon.ico">
@@ -81,7 +81,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#curso-de-lenguaje-c-numerico" class="nav-link">Curso de Lenguaje C Numérico</a>
+            <li class="nav-item" data-level="1"><a href="#fundamentos-de-metodos-numericos" class="nav-link">Fundamentos de Métodos Numéricos.</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#a-quien-se-dirige-este-documento" class="nav-link">¿A quién se dirige este documento?</a>
               <ul class="nav flex-column">
@@ -110,11 +110,10 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="curso-de-lenguaje-c-numerico">Curso de Lenguaje C Numérico</h1>
-<p>Curso de introducción al lenguaje C orientado a los métodos y la simulación numérica.</p>
-<p>Este curso pretende ofrecer de forma simple y clara una <strong>introducción rápida a la programación con el lenguaje C</strong>. El objetivo es no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para una persona que se inicia en ester lenguaje <em>para su uso en matemáticas</em> y, concretamente, para la implementación de <strong>algoritmos relacionados con el cálculo y los <em>métodos numéricos</em></strong>. Se presentan numerosos ejemplos siempre ilustrando conceptos relacionados con esta temática, acompañados con los conocimientos matemáticos mínimos para comprenderlos.</p>
+<h1 id="fundamentos-de-metodos-numericos">Fundamentos de Métodos Numéricos.</h1>
+<p>Este curso pretende ofrecer de forma simple y clara un repaso a algunos de los <strong>fundamentos requeridos para cursar asignaturas de métodos numéricos</strong>. Se presentan numerosos ejemplos, siempre ilustrando conceptos relacionados con esta temática y acompañados con los conocimientos matemáticos mínimos para comprenderlos. Se acompaña de una <strong>introducción rápida a la programación con el lenguaje C</strong>. El objetivo es no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para programar los ejemplos y sentar su base para el uso en el futuro de este u otros lenguajes de programación en métodos numéricos.</p>
 <h2 id="a-quien-se-dirige-este-documento">¿A quién se dirige este documento?</h2>
-<p>Este documento ha sido realizado pensando en estudiantes de Métodos Numéricos en el Grado en Matemáticas de la Universidad de Cádiz, pero está dirigido a toda persona que desee obtener conocimientos básicos en programación en lenguaje C y herramientas matemáticas básicas para ser usados en algoritmos/asignaturas relacionados con las matemáticas, en especial con los métodos numéricos y la simulación numéricas. Por supuesto, se recomienda las personas interesadas el profundizar en el futuro en estos temas, realizando cursos o consultando bibliografía como:</p>
+<p>Este documento ha sido realizado pensando en estudiantes de Métodos Numéricos en el Grado en Matemáticas de la Universidad de Cádiz, pero está dirigido a toda persona interesada en la temática. Para profundizar en los métodos numéricos y en la programación en lenguaje C, se recomienda consultar bibliografía como:</p>
 <pre><code>H. Schildt, C. Guía de autoenseñanza
 Osborne/McGraw-Hill, 2002
 
@@ -139,14 +138,14 @@ Addison-Wesley-Iberoamericana 1994
 <ul>
 <li>C es un lenguaje de <a href="https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel">alto nivel</a>) (cercano al lenguaje humano) aunque posee características de <a href="https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel">bajo nivel</a> (cercanas al <a href="https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina">código de máquina</a>).</li>
 <li>Es un <a href="https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado">lenguaje compilado</a>, es decir requiere de un <a href="https://es.wikipedia.org/wiki/Compilador">compilador</a> para generar un fichero con código ejecutable por la máquina.</li>
-<li>Estas características hacen que un programa en lenguaje C sea mucho <em>más rápido que otros lenguajes</em> de mayor nivel como <a href="https://www.python.org/">Python</a> o <a href="https://www.mathworks.com/products/matlab.html">Matlab</a>/<a href="https://www.gnu.org/software/octave/index">Octave</a>: lenguajes usados con frecuencia en cálculo numérico (de tipo <a href="https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)">interpretado</a>, no compilado).</li>
+<li>Estas características hacen que el código resultante de la programación en lenguaje C sea mucho <em>más rápido que otros lenguajes</em> de mayor nivel como <a href="https://www.python.org/">Python</a> o <a href="https://www.mathworks.com/products/matlab.html">Matlab</a>/<a href="https://www.gnu.org/software/octave/index">Octave</a>: lenguajes usados con frecuencia en cálculo numérico, pero que son de tipo <a href="https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)">interpretado</a>, no compilado.</li>
 <li>Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python, Matlab/Octave o <a href="https://es.wikipedia.org/wiki/Mathematica">Mathematica</a>.</li>
 </ul>
 <h2 id="que-son-los-metodos-numericos">¿Qué son los Métodos Numéricos?</h2>
-<p>De forma muy genérica, podríamos definir a los <em>Métodos Numéricos</em> como la rama de las <em>Matemáticas</em> que analiza y construye algoritmos para resolver problemas <strong><em>de forma aproximada</em></strong>. Estos algoritmos suelen requerir grandes cálculos y son implementados como programas de ordenador. Se hecho, la eclosión de la <em>informática</em> propició un enorme avance en esta rama de las matemáticas.</p>
+<p>De forma muy genérica, podríamos definir a los <em>Métodos Numéricos</em> como la rama de las <em>Matemáticas</em> que analiza y construye algoritmos para resolver problemas <strong><em>de forma aproximada</em></strong>. Estos algoritmos suelen requerir grandes cálculos y son implementados como programas de ordenador y, de hecho, la eclosión de la informática ha producido un enorme avance en esta rama de las matemáticas.</p>
 <p>Es importante enfatizar que <strong><em>de forma aproximada no significa poco precisa</em></strong> o con <em>poco rigor</em>. De hecho, en métodos numéricos es fundamental establecer resultados que garanticen el buen planteamiento de los <em>problemas aproximados</em> y la <em>convergencia</em> de las soluciones aproximadas hacia la «<em>solucion exacta</em>» del problema considerado. De forma que sea posible el cálculo de soluciones aproximadas  «<strong><em>tan cercanas a la solución exacta como desemos</em></strong>», siempre que dispongamos de suficiente <em>potencia de cálculo</em> para ello.</p>
 <h2 id="acerca-de">Acerca de</h2>
-<p>Este documento ha sido creado como apoyo a las asignaturas <em>Métodos Numéricos I</em> y <em>Métodos Numéricos II</em> del <a href="https://ciencias.uca.es/matematicas">Grado en Matemáticas de la Unviersidad de Cádiz</a>. Puede accederse a todo el material en el repositorio <a href="https://github.com/rrgalvan/curso-c-numerico">https://github.com/rrgalvan/curso-c-numerico</a>. Se otorga permiso para copiar y reutilizar este material bajo los términos de las licencias libres <a href="https://es.wikipedia.org/wiki/Licencia_de_documentaci%C3%B3n_libre_de_GNU">GFDL</a> o <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">Creative Commons Compartir-Igual 3.0</a>. Véase el fichero <a href="about/">about.md</a></p></div>
+<p>Este documento ha sido creado como apoyo a las asignaturas <em>Métodos Numéricos I</em> y <em>Métodos Numéricos II</em> del <a href="https://ciencias.uca.es/matematicas">Grado en Matemáticas de la Unviersidad de Cádiz</a>. Puede accederse a todo el material en el repositorio <a href="https://github.com/rrgalvan/curso-c-numerico">https://github.com/rrgalvan/curso-c-numerico</a>. Se otorga permiso para copiar y reutilizar este material bajo los términos de las licencias libre <a href="https://es.wikipedia.org/wiki/Licencia_de_documentaci%C3%B3n_libre_de_GNU">GFDL</a> o <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">Creative Commons Compartir-Igual 3.0</a>. Véase el fichero <a href="about/">about.md</a></p></div>
             </div>
         </div>
 
@@ -229,5 +228,5 @@ Addison-Wesley-Iberoamericana 1994
 
 <!--
 MkDocs version : 1.2.2
-Build Date UTC : 2021-10-03 16:10:56.988044+00:00
+Build Date UTC : 2021-10-04 10:25:12.887552+00:00
 -->

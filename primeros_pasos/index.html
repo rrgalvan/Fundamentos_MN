@@ -115,7 +115,7 @@
 <li>El algoritmo termina un tiempo finito después de ejecutar todos los pasos.</li>
 </ul>
 <p>Buena parte de los <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_num%C3%A9rico">métodos numéricos</a> se centra en el desarrollo y análisis matemático de algoritmos para  calcular aproximaciones (tan exactas como deseemos) de la solución de problemas concretos.</p>
-<p><strong>Ejemplo</strong>: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz o cero de una función <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, es decir, un número <span><span class="MathJax_Preview">\alpha\in\mathbb R</span><script type="math/tex">\alpha\in\mathbb R</script></span> tal que <span><span class="MathJax_Preview">f(\alpha)=0</span><script type="math/tex">f(\alpha)=0</script></span>:</p>
+<p><strong>Ejemplo</strong>: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz de una función <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, es decir, un número <span><span class="MathJax_Preview">\alpha\in\mathbb R</span><script type="math/tex">\alpha\in\mathbb R</script></span> tal que <span><span class="MathJax_Preview">f(\alpha)=0</span><script type="math/tex">f(\alpha)=0</script></span>:</p>
 <ul>
 <li>
 <p>Datos de entrada: una función real de una variable, <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, su derivada, <span><span class="MathJax_Preview">f'(x)</span><script type="math/tex">f'(x)</script></span>, una estimación <span><span class="MathJax_Preview">x_0\in\mathbb R</span><script type="math/tex">x_0\in\mathbb R</script></span>, y el número máximo de iteraciones, <span><span class="MathJax_Preview">N\in\mathbb N</span><script type="math/tex">N\in\mathbb N</script></span>:</p>
@@ -127,8 +127,8 @@ x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}
 $$</p>
 </li>
 </ul>
-<p>El <em>análisis numérico</em> aplicado a este algoritmo nos garantizará que, bajo determinadas hipótesis (por ejemplo, <span><span class="MathJax_Preview">f'\neq0</span><script type="math/tex">f'\neq0</script></span> «cerca de <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>») se tiene que <span><span class="MathJax_Preview">x_k \to \alpha</span><script type="math/tex">x_k \to \alpha</script></span> (o sea, <span><span class="MathJax_Preview">\lim_{k\to +\infty} x_k = \alpha</span><script type="math/tex">\lim_{k\to +\infty} x_k = \alpha</script></span>). Más aún: para cualquier <span><span class="MathJax_Preview">k\in\mathbb N</span><script type="math/tex">k\in\mathbb N</script></span>, se puede estimar el error o diferencia entre <span><span class="MathJax_Preview">x_k</span><script type="math/tex">x_k</script></span> y <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> (y por supuesto todo ello ¡sin saber cuál es el valor <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>, la solución exacta!).</p>
-<p>Un <a href="https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico">programa</a> es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos. Más adelante, programaremos en el algoritmo anterior en <em>lenguaje C</em> para calcular un cero de una función concreta.</p>
+<p>Bajo determinadas hipótesis (por ejemplo, <span><span class="MathJax_Preview">f'\neq0</span><script type="math/tex">f'\neq0</script></span> «cerca de <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>») se puede demostrar que <span><span class="MathJax_Preview">x_k \to \alpha</span><script type="math/tex">x_k \to \alpha</script></span> y, para cualquier <span><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>, se puede estimar el error (la diferencia) entre <span><span class="MathJax_Preview">x_k</span><script type="math/tex">x_k</script></span> y <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>.</p>
+<p>Un <a href="https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico">programa</a> es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos.</p>
 <p>Un algoritmo es independiente del lenguaje de ordenador o la máquina donde se implemente.</p>
 <h2 id="lenguajes-de-ordenador">Lenguajes de ordenador</h2>
 <ul>
@@ -209,8 +209,8 @@ ejecutarse posteriormente y de forma directa, es decir sin recurrir a un intérp
 <p>En <strong>MacOS</strong> se requiere la instalación de <a href="https://apps.apple.com/es/app/xcode/id497799835?mt=12">Xcode</a>, disponible directamente en la <em>Mac App Store</em>.</p>
 </li>
 <li>
-<p>En <strong>Windows</strong>, basta instalar <strong><a href="https://es.wikipedia.org/wiki/MinGW">MinGW</a></strong>, un proyecto para portar a plataformas Windows la familia de compiladores de GNU. Para instarlo, basta <a href="https://www.mingw-w64.org/downloads/">descargarlo de su página web</a>.  Además, deberás asegurarse de que la carpeta donde se haya instalado el programa <em>gcc</em> haya sido añadida a la variable de sistema <em>PATH</em>. <strong>Es fácil, <a href="https://www.youtube.com/watch?v=sXW2VLrQ3Bs">puedes ver los detalles (por ejemplo) en este <em>tutorial</em></a></strong>:
-<br/>&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/sXW2VLrQ3Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p>En <strong>Windows</strong>, basta instalar <a href="https://es.wikipedia.org/wiki/MinGW">MinGW</a>, un proyecto para portar a plataformas Windows la familia de compiladores de GNU. Para instarlo, basta <a href="https://www.mingw-w64.org/downloads/">descargarlo de su página web</a>.  Además, deberás asegurarse de que la carpeta donde se haya instalado el programa <em>gcc</em> haya sido añadida a la variable de sistema <em>PATH</em>. <strong>Es fácil, <a href="https://www.youtube.com/watch?v=sXW2VLrQ3Bs">puedes ver los detalles (por ejemplo) en este <em>tutorial</em></a></strong>:
+&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/sXW2VLrQ3Bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 </li>
 </ul>
 <h3 id="atom">Atom</h3>
@@ -224,7 +224,7 @@ operativo.</li>
 </li>
 <li>
 <p><strong><a href="https://www.youtube.com/watch?v=9aneqcQD1Gs">Puedes ver los detalles de la instalación en este <em>tutorial</em></a></strong> (centrado en Windows, pero generalizable al resto de sistemas operativos):
-<br/> &nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/9aneqcQD1Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+&nbsp;<iframe width="560" height="315" src="https://www.youtube.com/embed/9aneqcQD1Gs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 </li>
 </ul>
 <h2 id="primer-programa-en-c">Primer programa en C</h2>
