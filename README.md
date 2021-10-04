@@ -1,3 +1,3 @@
 # Curso de fundamentos de métodos numéricos
 
-[docs/index.md]
+[Ver la p](https://rrgalvan.github.io/fundamentos-numerico/)
