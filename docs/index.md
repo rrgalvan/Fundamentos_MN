@@ -41,7 +41,7 @@ Con el paso del tiempo, C se ha convertido en el lenguaje más trascendente de l
 
 De forma resumida (más sobre ello a continuación):
 
-- C es un lenguaje de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel)) (cercano al lenguaje humano) aunque posee características de [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel) (cercanas al [código de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina)).
+- C es un lenguaje de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel) (cercano al lenguaje humano) aunque posee características de [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel) (cercanas al [código de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina)).
 - Es un [lenguaje compilado](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado), es decir requiere de un [compilador](https://es.wikipedia.org/wiki/Compilador) para generar un fichero con código ejecutable por la máquina.
 - Estas características hacen que el código resultante de la programación en lenguaje C sea mucho *más rápido que otros lenguajes* de mayor nivel como [Python](https://www.python.org/) o [Matlab](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/index): lenguajes usados con frecuencia en cálculo numérico, pero que son de tipo [interpretado](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)), no compilado.
 - Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python, Matlab/Octave o [Mathematica](https://es.wikipedia.org/wiki/Mathematica).
