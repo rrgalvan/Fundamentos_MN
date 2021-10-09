@@ -24,7 +24,7 @@ Un *análisis numérico* aplicado a este algoritmo nos garantizará que, bajo de
 
 Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos. Más adelante, *programaremos el algoritmo anterior en lenguaje C*, para calcular un cero de una función concreta. Pero antes de ello, será necesario realizar una introducción a este lenguaje, a lo que nos dedicamos a continuación.
 
-Nota: quizás ya tengas curiosidad sobre qué pinta tendría una [implementación en lenguaje C del algoritmo de Newton](ejemplo_Newton_C.md): pincha en el enlace para verlo.
+Nota: quizás ya tengas curiosidad sobre qué pinta tendría una [implementación en lenguaje C del algoritmo de Newton](ejemplo_Newton_C.md): pincha en el enlace para verlo. Anímate a echarle un vistazo, no importa si no lo entiendes todo (es normal). Y en cuanto entiendas el proceso de compilación y ejecución de programas C, ¡te animamos a experimentar con los resultados!
 
 
 ## Lenguajes de ordenador
