@@ -1,6 +1,6 @@
 # Fundamentos de Métodos Numéricos
 
-Este curso pretende ofrecer de forma simple y clara un repaso a algunos de los **fundamentos requeridos para cursar asignaturas de métodos numéricos**. Se presentan numerosos ejemplos, siempre ilustrando conceptos relacionados con esta temática y acompañados con los conocimientos matemáticos mínimos para comprenderlos. Se acompaña de una **introducción rápida a la programación con el lenguaje C**. El objetivo es no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para programar los ejemplos y sentar su base para el uso en el futuro de este u otros lenguajes de programación en métodos numéricos.
+Este curso pretende ofrecer de forma simple y clara un repaso a algunos de los **fundamentos requeridos para cursar asignaturas de métodos numéricos**. Se presentan numerosos ejemplos, siempre ilustrando conceptos relacionados con esta temática y acompañados con los conocimientos matemáticos mínimos para comprenderlos. Se acompaña de una **introducción rápida a la programación con el lenguaje C**. El objetivo no es presentar una referencia exhaustiva este lenguaje, sino ofrecer la información imprescindible para programar los ejemplos y sentar su base para el uso en el futuro de este u otros lenguajes de programación en métodos numéricos.
 
 
 ## ¿A quién se dirige este documento?
@@ -28,7 +28,7 @@ El material aquí recogido tiene licencia libre, [aquí puedes leer más la lice
 
 De forma muy genérica, podríamos definir a los *Métodos Numéricos* como la rama de las *Matemáticas* que analiza y construye algoritmos para resolver problemas ***de forma aproximada***. Estos algoritmos suelen requerir grandes cálculos y son implementados como programas de ordenador y, de hecho, la eclosión de la informática ha producido un enorme avance en esta rama de las matemáticas.
 
-Es importante enfatizar que ***de forma aproximada no significa poco precisa*** o con *poco rigor*. De hecho, en métodos numéricos es fundamental establecer resultados que garanticen el buen planteamiento de los *problemas aproximados* y la *convergencia* de las soluciones aproximadas hacia la «*solucion exacta*» del problema considerado. De forma que sea posible el cálculo de soluciones aproximadas  «***tan cercanas a la solución exacta como desemos***», siempre que dispongamos de suficiente *potencia de cálculo* para ello.
+Es importante enfatizar que ***de forma aproximada no significa poco precisa*** o con *poco rigor*. De hecho, en métodos numéricos es fundamental establecer resultados que garanticen el buen planteamiento de los *problemas aproximados* y la *convergencia* de las soluciones aproximadas hacia la «*solucion exacta*» del problema considerado. De forma que sea posible el cálculo de soluciones aproximadas  «***tan cercanas a la solución exacta como desemos***», siempre que dispongamos de suficiente *potencia de cálculo*.
 
 
 ## ¿Qué es el lenguaje C?
@@ -43,5 +43,5 @@ De forma resumida (más sobre ello a continuación):
 
 - C es un lenguaje de [alto nivel](https://es.wikipedia.org/wiki/Lenguaje_de_alto_nivel) (cercano al lenguaje humano) aunque posee características de [bajo nivel](https://es.wikipedia.org/wiki/Lenguaje_de_bajo_nivel) (cercanas al [código de máquina](https://es.wikipedia.org/wiki/Lenguaje_de_m%C3%A1quina)).
 - Es un [lenguaje compilado](https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n_compilado), es decir requiere de un [compilador](https://es.wikipedia.org/wiki/Compilador) para generar un fichero con código ejecutable por la máquina.
-- Estas características hacen que el código resultante de la programación en lenguaje C sea mucho *más rápido que otros lenguajes* de mayor nivel como [Python](https://www.python.org/) o [Matlab](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/index): lenguajes usados con frecuencia en cálculo numérico, pero que son de tipo [interpretado](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)), no compilado.
+- Estas características hacen que los programas sean mucho *más rápidos que en otros lenguajes* de mayor nivel como [Python](https://www.python.org/) o [Matlab](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/index): lenguajes  [interpretados](https://es.wikipedia.org/wiki/Int%C3%A9rprete_(inform%C3%A1tica)) que son usados con frecuencia en cálculo numérico.
 - Por contra, el tiempo requerido para programar algoritmos en lenguaje C es usualmente mayor que en lenguajes de alto nivel como Python, Matlab/Octave o [Mathematica](https://es.wikipedia.org/wiki/Mathematica).

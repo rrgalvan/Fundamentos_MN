@@ -1,4 +1,4 @@
-# Ejemplo: algoritmo método de Newton
+# Ejemplo: aogoritmo método de Newton
 
 A continuación escribimos un ejemplo sencillo para ilustrar la implementación en C del método de Newton.
 
@@ -46,11 +46,14 @@ Como se puede ver, el programa utiliza la biblioteca matemática estándar `math
 </div>
 
 
-Se te interesa el uso de la terminal: para compilar el programa puedes escribir la orden:
+Si te interesa el uso de la terminal: para compilar el programa puedes escribir la orden:
 
     gcc -o newton newton.c -lm
 
-Por supuesto, la orden anterior supone que el código está en el fichero `newton.c` y que te has situado en el directorio que lo contiene (`cd <ruta_al_directorio>`). La orden generará un programa llamado `newton`, que podrás ejecutar en la terminal escribiendo
+Por supuesto, la orden anterior supone que el código está en el
+fichero `newton.c` y que te has situado en el directorio que lo
+contiene (`cd <ruta_al_directorio>`). La orden generará un programa
+llamado `newton`, que podrás ejecutar en la terminal escribiendo:
 
     ./newton
 
@@ -58,7 +61,7 @@ Por supuesto, la orden anterior supone que el código está en el fichero `newto
 
 La función introducida es un polinomio de grado $4$, $f(x)=x^4-x^2-x$, por lo que como máximo tendremos $4$ ceros.
 
-- Una de las raíces está clara: $x=0$. El programa te devolverá este resultado si la inicialización es pequeña en valor absoluto
-- Busca la segunda raíz: ¿qué pasa si tomas inicializaciones positivas? ¿y si tomas inicializaciones negativas? ¿Cuántas raíces tiene, aparentemente, la función? (para saberlo de forma rigurosa, podríamos recurrir al análisis matemático, crecimiento, decrecimiento, Teorema de Bolzano, etc.).
+- Una de las raíces está clara: $x=0$. El programa te devolverá este resultado si la inicialización es pequeña en valor absoluto.
+- Busca la segunda raíz: ¿qué pasa si tomas inicializaciones positivas? ¿y si tomas inicializaciones negativas? ¿Cuántas raíces tiene, aparentemente, la función? Para saberlo de forma rigurosa, podríamos recurrir al análisis matemático, crecimiento, decrecimiento, Teorema de Bolzano, etc, pero este no es el tema que ahora nos ocupa.
 - Observa que basta una cantidad relativamente pequeña de iteraciones para obtener $f(x) \simeq 0$ con una aproximación del orden de $10^{-16}$. Y a partir de ese momento, el valor de $f(x)$ no decrece, por muchas iteraciones que realicemos. El motivo es que el valor `2.22e-16` es el *[épsilon de la máquina](https://en.wikipedia.org/wiki/Machine_epsilon)* (en doble precisión). Así, $10^{-16}$ «***es igual a cero***» en el estándar en coma flotante de doble precisión.
-- Pero, ¿por qué doble precisión? ¿qué ocurre si hacemos las cuentas en simple precisión? Haz la prueba: tendrás que cambiar el tipo de datos `double` por `float` (coma flotante en simple precisión). También el formato `lf` (*long float*) por `f` (*float*). ¿Coinciden los datos con el [épsilon de la máquina en simple precisión especificado en Wikipedia](https://en.wikipedia.org/wiki/Machine_epsilon)?
+- Pero, ¿por qué doble precisión? ¿qué ocurre si hacemos las cuentas en simple precisión? Haz la prueba: tendrás que cambiar el tipo de datos `double` por `float` (coma flotante en simple precisión). También el formato `lf` (*long float*) por `f` (*float*). ¿Coinciden los datos con el [épsilon de la máquina en simple precisión](https://en.wikipedia.org/wiki/Machine_epsilon), especificado en Wikipedia?

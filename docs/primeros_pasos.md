@@ -6,16 +6,16 @@ En esta sección se introducen algunas definiciones sobre conceptos relacionados
 
 Sin entrar en una definición más precisa, entenderemos por [algoritmo](https://es.wikipedia.org/wiki/Algoritmo) a un conjunto de pasos, instrucciones o acciones lógicas que se deben seguir para resolver un problema, de forma que:
 
-- Cada uno de estos pasos está definido sin ambigüedad
+- Cada uno de estos pasos está definido sin ambigüedad.
 - El algoritmo termina un tiempo finito después de ejecutar todos los pasos.
 
 Buena parte de los [métodos numéricos](https://es.wikipedia.org/wiki/An%C3%A1lisis_num%C3%A9rico) se centra en el desarrollo y análisis matemático de algoritmos para  calcular aproximaciones (tan exactas como deseemos) de la solución de problemas concretos.
 
 **Ejemplo**: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz o cero de una función $f(x)$, es decir, un número $\alpha\in\mathbb R$ tal que $f(\alpha)=0$:
 
-- Datos de entrada: una función real de una variable, $f(x)$, su derivada, $f'(x)$, una estimación $x_0\in\mathbb R$, y el número máximo de iteraciones, $N\in\mathbb N$:
+1. Leer los datos de entrada: una función real de una variable, $f(x)$, su derivada, $f'(x)$, una estimación $x_0\in\mathbb R$, y el número máximo de iteraciones, $N\in\mathbb N$.
 
-- Repetir, para cada $k\in\{0, N-1\}$:
+2. Repetir, para cada $k\in\{0, N-1\}$:
 $$
 x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}
 $$
