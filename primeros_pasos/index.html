@@ -111,14 +111,14 @@
 <h2 id="algoritmos">Algoritmos</h2>
 <p>Sin entrar en una definición más precisa, entenderemos por <a href="https://es.wikipedia.org/wiki/Algoritmo">algoritmo</a> a un conjunto de pasos, instrucciones o acciones lógicas que se deben seguir para resolver un problema, de forma que:</p>
 <ul>
-<li>Cada uno de estos pasos está definido sin ambigüedad</li>
+<li>Cada uno de estos pasos está definido sin ambigüedad.</li>
 <li>El algoritmo termina un tiempo finito después de ejecutar todos los pasos.</li>
 </ul>
 <p>Buena parte de los <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_num%C3%A9rico">métodos numéricos</a> se centra en el desarrollo y análisis matemático de algoritmos para  calcular aproximaciones (tan exactas como deseemos) de la solución de problemas concretos.</p>
 <p><strong>Ejemplo</strong>: Consideremos el siguiente algoritmo (método de Newton) para aproximar una raíz o cero de una función <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, es decir, un número <span><span class="MathJax_Preview">\alpha\in\mathbb R</span><script type="math/tex">\alpha\in\mathbb R</script></span> tal que <span><span class="MathJax_Preview">f(\alpha)=0</span><script type="math/tex">f(\alpha)=0</script></span>:</p>
-<ul>
+<ol>
 <li>
-<p>Datos de entrada: una función real de una variable, <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, su derivada, <span><span class="MathJax_Preview">f'(x)</span><script type="math/tex">f'(x)</script></span>, una estimación <span><span class="MathJax_Preview">x_0\in\mathbb R</span><script type="math/tex">x_0\in\mathbb R</script></span>, y el número máximo de iteraciones, <span><span class="MathJax_Preview">N\in\mathbb N</span><script type="math/tex">N\in\mathbb N</script></span>:</p>
+<p>Leer los datos de entrada: una función real de una variable, <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span>, su derivada, <span><span class="MathJax_Preview">f'(x)</span><script type="math/tex">f'(x)</script></span>, una estimación <span><span class="MathJax_Preview">x_0\in\mathbb R</span><script type="math/tex">x_0\in\mathbb R</script></span>, y el número máximo de iteraciones, <span><span class="MathJax_Preview">N\in\mathbb N</span><script type="math/tex">N\in\mathbb N</script></span>.</p>
 </li>
 <li>
 <p>Repetir, para cada <span><span class="MathJax_Preview">k\in\{0, N-1\}</span><script type="math/tex">k\in\{0, N-1\}</script></span>:
@@ -126,7 +126,7 @@ $$
 x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}
 $$</p>
 </li>
-</ul>
+</ol>
 <p>Un <em>análisis numérico</em> aplicado a este algoritmo nos garantizará que, bajo determinadas hipótesis (por ejemplo, <span><span class="MathJax_Preview">f'\neq0</span><script type="math/tex">f'\neq0</script></span> «cerca de <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>») se tiene que <span><span class="MathJax_Preview">x_k \to \alpha</span><script type="math/tex">x_k \to \alpha</script></span> (o sea, <span><span class="MathJax_Preview">\lim_{k\to +\infty} x_k = \alpha</span><script type="math/tex">\lim_{k\to +\infty} x_k = \alpha</script></span>). Más aún: para cualquier <span><span class="MathJax_Preview">k\in\mathbb N</span><script type="math/tex">k\in\mathbb N</script></span>, se puede estimar el error o diferencia entre <span><span class="MathJax_Preview">x_k</span><script type="math/tex">x_k</script></span> y <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> (y por supuesto todo ello ¡sin saber cuál es el valor <span><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>, la solución exacta!).</p>
 <p>Un <a href="https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico">programa</a> es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos. Más adelante, <em>programaremos el algoritmo anterior en lenguaje C</em>, para calcular un cero de una función concreta. Pero antes de ello, será necesario realizar una introducción a este lenguaje, a lo que nos dedicamos a continuación.</p>
 <p>Nota: quizás ya tengas curiosidad sobre qué pinta tendría una <a href="../ejemplo_Newton_C/">implementación en lenguaje C del algoritmo de Newton</a>: pincha en el enlace para verlo. Anímate a echarle un vistazo, no importa si no lo entiendes todo (es normal). Y en cuanto entiendas el proceso de compilación y ejecución de programas C, ¡te animamos a experimentar con los resultados!</p>
