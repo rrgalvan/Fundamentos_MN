@@ -22,7 +22,9 @@ $$
 
 Un *análisis numérico* aplicado a este algoritmo nos garantizará que, bajo determinadas hipótesis (por ejemplo, $f'\neq0$ «cerca de $\alpha$») se tiene que $x_k \to \alpha$ (o sea, $\lim_{k\to +\infty} x_k = \alpha$). Más aún: para cualquier $k\in\mathbb N$, se puede estimar el error o diferencia entre $x_k$ y $\alpha$ (y por supuesto todo ello ¡sin saber cuál es el valor $\alpha$, la solución exacta!).
 
-Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos. Más adelante, *programaremos el algoritmo anterior en lenguaje C*, para calcular un cero de una función concreta. Pero antes de ello, será necesario realizar una introducción a este lenguaje.
+Un [programa](https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico) es una secuencia de instrucciones escritas en un determinado lenguaje de ordenador para realizar o implementar uno o más algoritmos. Más adelante, *programaremos el algoritmo anterior en lenguaje C*, para calcular un cero de una función concreta. Pero antes de ello, será necesario realizar una introducción a este lenguaje, a lo que nos dedicamos a continuación.
+
+Nota: quizás ya tengas curiosidad sobre qué pinta tendría una [implementación en lenguaje C del algoritmo de Newton: pincha aquí si quieres verlo](ejemplo_Newton_C.md).
 
 
 ## Lenguajes de ordenador
