@@ -73,6 +73,14 @@
             
             <li class="nav-item" data-level="1"><a href="#ejemplo-algoritmo-metodo-de-newton" class="nav-link">Ejemplo: algoritmo método de Newton</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#como-puedo-ejecutar-este-programa" class="nav-link">¿Cómo puedo ejecutar este programa?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#que-resultados-puedo-esperar-si-ejecuto-el-programa" class="nav-link">¿Qué resultados puedo esperar si ejecuto el programa?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -81,18 +89,7 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="ejemplo-algoritmo-metodo-de-newton">Ejemplo: algoritmo método de Newton</h1>
-<p>A continuación escribimos un ejemplo sencillo para ilustrar la implementación en C del método de Newton. Como se puede ver, se utiliza la biblioteca standard <code>math.h</code> (para utilizar la función <code>pow</code>). Si usas el compilador <em>gcc</em>, deberás utilizar la opción <code>-lm</code> para enlazar con la biblioteca matemática de C. Si usas el editor <em>Atom</em> y el paquete <em>gpp-compiler</em>, deberás acceder a la configuración de este paquete y, en la opción <em>C Compiler Options</em>, escribir <code>-lm</code>.</p>
-<div class="image-container"; style="width:50%; line-height:5pt; margin-left:42px;">
-<img src="https://rrgalvan.github.io/Fundamentos_MN/img/atom_compiler_options.png" alt="Atom C Compiler Options">
-</div>
-
-<p>Se te interesa el uso de la terminal: para compilar el programa puedes escribir la orden:</p>
-<pre><code>gcc -o newton newton.c -lm
-</code></pre>
-<p>Por supuesto, la orden anterior supone que el código esté en el fichero <code>newton.c</code> y que te has situado en el directorio que lo contiene (<code>cd &lt;ruta_al_directorio&gt;</code>). La orden generará un programa llamado <code>newton</code>, que podrás ejecutar en la terminal escribiendo</p>
-<pre><code>./newton
-</code></pre>
-<p>A continuación, el programa C:</p>
+<p>A continuación escribimos un ejemplo sencillo para ilustrar la implementación en C del método de Newton.</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
 
@@ -126,7 +123,26 @@ int main(void) {
     printf("\n¿Es f(x)=0?... f(x)=%lf (más exactamente: %.15g)\n", y, y);
     return 0;
 }
-</code></pre></div>
+</code></pre>
+<h2 id="como-puedo-ejecutar-este-programa">¿Cómo puedo ejecutar este programa?</h2>
+<p>Como se puede ver, el programa utiliza la biblioteca matemática estándar <code>math.h</code> (que contiene funciones como <code>pow</code>, <code>cos</code>, <code>exp</code>, etc). Si usas el compilador <em>gcc</em>, deberás utilizar la opción <code>-lm</code> para enlazar el programa con esta biblioteca. Si usas el editor <em>Atom</em> y el paquete <em>gpp-compiler</em>, deberás acceder a la configuración de este paquete y, en la opción <em>C Compiler Options</em>, escribir <code>-lm</code>.</p>
+<div class="image-container"; style="width:50%; line-height:5pt; margin-left:42px;">
+<img src="https://rrgalvan.github.io/Fundamentos_MN/img/atom_compiler_options.png" alt="Atom C Compiler Options">
+</div>
+
+<p>Se te interesa el uso de la terminal: para compilar el programa puedes escribir la orden:</p>
+<pre><code>gcc -o newton newton.c -lm
+</code></pre>
+<p>Por supuesto, la orden anterior supone que el código está en el fichero <code>newton.c</code> y que te has situado en el directorio que lo contiene (<code>cd &lt;ruta_al_directorio&gt;</code>). La orden generará un programa llamado <code>newton</code>, que podrás ejecutar en la terminal escribiendo</p>
+<pre><code>./newton
+</code></pre>
+<h2 id="que-resultados-puedo-esperar-si-ejecuto-el-programa">¿Qué resultados puedo esperar si ejecuto el programa?</h2>
+<p>La función introducida es un polinomio de grado <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span>, <span><span class="MathJax_Preview">f(x)=x^4-x^2-x</span><script type="math/tex">f(x)=x^4-x^2-x</script></span>, por lo que como máximo tendremos <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> ceros.</p>
+<ul>
+<li>Una de las raíces está clara: <span><span class="MathJax_Preview">x=0</span><script type="math/tex">x=0</script></span>. El programa te devolverá este resultado si la inicialización es pequeña en valor absoluto</li>
+<li>Busca la segunda raíz: ¿qué pasa si tomas inicializaciones positivas? ¿y si tomas inicializaciones negativas? ¿Cuántas raíces tiene, aparentemente, la función? (para saberlo de forma rigurosa, podríamos recurrir al análisis matemático, crecimiento, decrecimiento, Teorema de Bolzano, etc.).</li>
+<li>Observa que con una cantidad relativamente pequeña de iteraciones, se obtiene <span><span class="MathJax_Preview">f(x) \simeq 0</span><script type="math/tex">f(x) \simeq 0</script></span> con una aproximación de orden, al menos, <span><span class="MathJax_Preview">10^{-16}</span><script type="math/tex">10^{-16}</script></span>. Y a partir de ese momento, el valor de <span><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> no decrece, por muchas iteraciones que realice el método. El motivo es que el valor 2.22e-16 es el <em><a href="https://en.wikipedia.org/wiki/Machine_epsilon">épsilon de la máquina</a></em> (en doble precisión). Así, <span><span class="MathJax_Preview">10^{-16}</span><script type="math/tex">10^{-16}</script></span> «<strong><em>es igual a cero</em></strong>» en el estándar en coma flotante de doble precisión.</li>
+</ul></div>
             </div>
         </div>
 
