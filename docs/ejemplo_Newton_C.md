@@ -2,18 +2,21 @@
 
 A continuación escribimos un ejemplo sencillo para ilustrar la implementación en C del método de Newton. Como se puede ver, se utiliza la biblioteca standard `math.h` (para utilizar la función `pow`). Si usas el compilador *gcc*, deberás utilizar la opción `-lm` para enlazar con la biblioteca matemática de C. Si usas el editor *Atom* y el paquete *gpp-compiler*, deberás acceder a la configuración de este paquete y, en la opción *C Compiler Options*, escribir `-lm`.
 
-<img src="./img/atom_compiler_options.png" alt="Atom C Compiler Options">
+<div class="image-container"; style="width:50%; line-height:5pt; margin-left:42px;">
+<img src="https://rrgalvan.github.io/Fundamentos_MN/img/atom_compiler_options.png" alt="Atom C Compiler Options">
+</div>
 
 
-Por ejemplo, en una terminal puedes escribir:
+Se te interesa el uso de la terminal: para compilar el programa puedes escribir la orden:
 
     gcc -o newton newton.c -lm
 
-La orden anterior generará un programa llamado `newton, que podrás ejecutar en la terminal escribiendo
+
+Por supuesto, la orden anterior supone que el código esté en el fichero `newton.c` y que te has situado en el directorio que lo contiene (`cd <ruta_al_directorio>`). La orden generará un programa llamado `newton`, que podrás ejecutar en la terminal escribiendo
 
     ./newton
 
-
+A continuación, el programa C:
 
     #include <stdio.h>
     #include <math.h>
@@ -40,7 +43,7 @@ La orden anterior generará un programa llamado `newton, que podrás ejecutar en
         int iter = 0;
         // Método de Newton
         while (iter < maximaIteracion) {
-            x = x -(f(x)/fDerivada(x));
+            x = x - f(x)/fDerivada(x);
             iter++;
         }
         printf("\nSolución aproximada: x = %lf\n", x);
