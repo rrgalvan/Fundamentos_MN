@@ -82,16 +82,18 @@
 
 <h1 id="ejemplo-algoritmo-metodo-de-newton">Ejemplo: algoritmo método de Newton</h1>
 <p>A continuación escribimos un ejemplo sencillo para ilustrar la implementación en C del método de Newton. Como se puede ver, se utiliza la biblioteca standard <code>math.h</code> (para utilizar la función <code>pow</code>). Si usas el compilador <em>gcc</em>, deberás utilizar la opción <code>-lm</code> para enlazar con la biblioteca matemática de C. Si usas el editor <em>Atom</em> y el paquete <em>gpp-compiler</em>, deberás acceder a la configuración de este paquete y, en la opción <em>C Compiler Options</em>, escribir <code>-lm</code>.</p>
-<p><img src="./img/atom_compiler_options.png" alt="Atom C Compiler Options"></p>
-<p>Por ejemplo, en una terminal puedes escribir:</p>
+<div class="image-container"; style="width:50%; line-height:5pt; margin-left:42px;">
+<img src="https://rrgalvan.github.io/Fundamentos_MN/img/atom_compiler_options.png" alt="Atom C Compiler Options">
+</div>
+
+<p>Se te interesa el uso de la terminal: para compilar el programa puedes escribir la orden:</p>
 <pre><code>gcc -o newton newton.c -lm
 </code></pre>
-<p>La orden anterior generará un programa llamado `newton, que podrás ejecutar en la terminal escribiendo</p>
+<p>Por supuesto, la orden anterior supone que el código esté en el fichero <code>newton.c</code> y que te has situado en el directorio que lo contiene (<code>cd &lt;ruta_al_directorio&gt;</code>). La orden generará un programa llamado <code>newton</code>, que podrás ejecutar en la terminal escribiendo</p>
 <pre><code>./newton
-
-
-
-#include &lt;stdio.h&gt;
+</code></pre>
+<p>A continuación, el programa C:</p>
+<pre><code>#include &lt;stdio.h&gt;
 #include &lt;math.h&gt;
 
 double f(double x){
@@ -116,7 +118,7 @@ int main(void) {
     int iter = 0;
     // Método de Newton
     while (iter &lt; maximaIteracion) {
-        x = x -(f(x)/fDerivada(x));
+        x = x - f(x)/fDerivada(x);
         iter++;
     }
     printf("\nSolución aproximada: x = %lf\n", x);
