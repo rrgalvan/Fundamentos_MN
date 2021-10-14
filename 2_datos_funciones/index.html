@@ -8,7 +8,7 @@
         <meta name="author" content="Rafa Rguez. Galván">
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Más - Fundamentos_MN</title>
+        <title>Taller 2 - Fundamentos_MN</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -39,11 +39,11 @@
                             <li class="navitem">
                                 <a href="../1_primeros_pasos/" class="nav-link">Taller 1</a>
                             </li>
-                            <li class="navitem">
-                                <a href="../2_datos_funciones/" class="nav-link">Taller 2</a>
-                            </li>
                             <li class="navitem active">
-                                <a href="./" class="nav-link">Más</a>
+                                <a href="./" class="nav-link">Taller 2</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../about/" class="nav-link">Más</a>
                             </li>
                         </ul>
 
@@ -54,17 +54,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../2_datos_funciones/" class="nav-link">
+                                <a rel="prev" href="../1_primeros_pasos/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../about/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/rrgalvan/curso-c-numerico/edit/master/docs/about.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/rrgalvan/curso-c-numerico/edit/master/docs/2_datos_funciones.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -84,8 +84,12 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#licencia-y-autores" class="nav-link">Licencia y autores</a>
+            <li class="nav-item" data-level="1"><a href="#taller-2-tipos-de-datos-y-funciones-matematicas" class="nav-link">Taller 2: Tipos de Datos y Funciones Matemáticas</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#tipos-de-datos" class="nav-link">Tipos de datos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -93,15 +97,31 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="licencia-y-autores">Licencia y autores</h2>
+<h1 id="taller-2-tipos-de-datos-y-funciones-matematicas">Taller 2: Tipos de Datos y Funciones Matemáticas</h1>
+<p>Los objetos básicos manipulados por un programa  C sin <em>datos</em>, contenidos en <em>variables</em>. Para actuar sobre estos datos, se utilizan <em>expresiones</em> que contienen <em>operadores</em> que actúan sobre ellos.</p>
+<p>Cada objeto (datos, variables) tiene un <em>tipo</em> concreto, que determina qué valores puede contener y qué operaciones se pueden realizar sobre él. Antes de utilizar una variable, es necesario <em>declararla</em>, especificando cuál es su tipo, como veremos a continuación.</p>
+<h2 id="tipos-de-datos">Tipos de datos</h2>
+<p>A continuación estudiaremos los tipos de datos más sencillos: enteros, reales y caracteres. Más adelante se verán otros tipos de datos más complejos, como los vectores, las cadenas de caracteres y los punteros.</p>
+<h3 id="enteros">Enteros</h3>
+<p>Los enteros son el tipo de dato más primitivo en C. Según el tamaño de los datos que se quiera almacenar, existen distintos tipos de datos enteros: <code>short</code>, <code>int</code>, <code>long</code> y <code>long long</code>. Aunque el tamaño de estos tipos datos puede variar según el compilador y la plataforma de hardware (cada uno de estos tipos de datos puede ocupar desde 1 byte hasta 8 bytes en memoria), el tipo de datos <code>int</code> estándar viene dado por <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> bytes (es decir, <span><span class="MathJax_Preview">4\cdot 8 = 32</span><script type="math/tex">4\cdot 8 = 32</script></span> bits). Puedes encontrar más información en cualquier <a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C/Referencia">guía de referencia de C</a>.</p>
+<p>Además, el lenguaje C hace la distinción de si el entero es con signo (<code>signed</code>) o sin signo (<code>unsigned</code>). En caso de que no se declare si es con signo o sin signo, se toma con signo. El rango de valores de un tipo de datos viene dado por su signo y su tamaño en bytes. Por ejemplo:</p>
 <ul>
-<li>Copyright &copy; <em>J. Rafael Rodríguez Galván</em>.</li>
-<li>Copyright &copy; <em>Concepción García Vázquez</em>.</li>
-<li>Copyright &copy; <em>Antonio Núñez de Alba</em>.</li>
+<li>Un entero sin signo (<code>unsigned int</code> o simplemente <code>unsigned</code>) puede almacenar <span><span class="MathJax_Preview">2^{32}=4294967296</span><script type="math/tex">2^{32}=4294967296</script></span> valores, comprendidos entre <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> y <span><span class="MathJax_Preview">4294967295</span><script type="math/tex">4294967295</script></span>.</li>
 </ul>
-<p>Este material tiene licencia libre, en concreto otorga permiso su copia, modificación o redistribución bajo los términos de la Licencia <a href="http://www.gnu.org/licenses/licenses.html#FDL">GFDL</a> o de la licencia <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">Creative Commons Compartir-Igual 3.0</a>.</p>
-<p>Parte del material aquí recogido se basa en el <em>wikilibro</em> «<a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C">Programación en C</a>».
-Publicado por sus autores bajo estas mismas licencias.</p></div>
+<p><img href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IEEE_754_Double_Floating_Point_Format.svg/1024px-IEEE_754_Double_Floating_Point_Format.svg.png"></img></p>
+<ul>
+<li>Un entero con signo (<code>int</code>) reparte estos <span><span class="MathJax_Preview">4294967296</span><script type="math/tex">4294967296</script></span> valores entre <span><span class="MathJax_Preview">-2147483648</span><script type="math/tex">-2147483648</script></span> y <span><span class="MathJax_Preview">2147483647</span><script type="math/tex">2147483647</script></span>.</li>
+</ul>
+<p>¿Qué rango de valores admite un <code>short int</code> estándar, con y sin signo? ¿Y un <code>long int</code>?</p>
+<p>Algunos ejemplos de declaraciones de enteros en C:</p>
+<pre><code>int p;
+unsigned int m, n;
+long q = -10000000;
+</code></pre>
+<h3 id="reales">Reales</h3>
+<p>Para representar números reales no enteros se utiliza la sistema de representación basado en la técnica de coma flotante, que permite operar con números reales de diversas magnitudes, mediante un número decimal llamado mantisa y un exponente que indica el orden de magnitud.</p>
+<p>El tipo de dato flotante en lenguaje C utiliza dos tamaños: <code>float</code> (simple precisión) <code>double</code> (doble precisión), que ocupan 4 bytes y 8 bytes respectivamente. Puedes consultar información concreta sobre el almacenamiento de <a href="https://es.wikipedia.org/wiki/IEEE_754">números en coma flotante, recogida en el estándar IEEE 754-2008</a>. Comprobarás que:</p>
+<p>-</p></div>
             </div>
         </div>
 
