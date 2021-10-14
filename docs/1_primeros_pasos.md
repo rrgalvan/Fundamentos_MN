@@ -1,4 +1,4 @@
-# Primeros Pasos
+# Taller 1: Primeros Pasos
 
 En esta sección se introducen algunas definiciones sobre conceptos relacionados con los algoritmos numéricos y el lenguaje C. Se ofrecen algunas sugerencias para instalar un entorno de desarrollo en C y se introduce un primer ejemplo de este lenguaje.
 

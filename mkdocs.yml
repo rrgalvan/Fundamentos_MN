@@ -9,9 +9,10 @@ copyright: Licencia libre bajo los términos Creative Commons Compartir-Igual 3.
 
 # Structure
 nav:
-  - Introducción: index.md
-  - Primeros pasos: primeros_pasos.md
-  - Acerca de: about.md
+  - Intro: index.md
+  - Taller 1: 1_primeros_pasos.md
+  - Taller 2: 2_datos_funciones.md
+  - Más: about.md
 
 markdown_extensions:
   - pymdownx.arithmatex
