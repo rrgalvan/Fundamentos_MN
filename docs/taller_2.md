@@ -1,11 +1,20 @@
-# Taller 2: Tipos de Datos y Funciones Matemáticas
+# Taller 2: Arrancando en C: Distancia y Norma
 
-Los objetos básicos manipulados por un programa  C sin *datos*, contenidos en *variables*. Para actuar sobre estos datos, se utilizan *expresiones* que contienen *operadores* que actúan sobre ellos.
+En este taller se exploran los conceptos de distancia euclídea y
+norma sobre el espacio vectorial $\mathbb R^n$ utilizando programas
+en lenguaje C. La idea es introducir tanto los conceptos matemáticos
+como informáticos de forma real pero evitando todo lo posible el
+enredarnos en detalles técnicos, definiciones, demostraciones,
+etc. Todo ello se entiende que será objeto de estudio en el futuro.
 
-Cada objeto (datos, variables) tiene un *tipo* concreto, que determina qué valores puede contener y qué operaciones se pueden realizar sobre él. Antes de utilizar una variable, es necesario *declararla*, especificando cuál es su tipo, como veremos a continuación.
+
+## Datos, variables y expresiones aritméticas
+
+Los objetos básicos manipulados por un programa  C son **datos**, contenidos en **variables**. Para actuar sobre estos datos, se utilizan **expresiones** que contienen *operadores* que actúan sobre ellos.
+
+Cada objeto (datos, variables) tiene un **tipo** concreto, que determina qué valores puede contener y qué operaciones se pueden realizar sobre él. Antes de utilizar una variable, es necesario *declararla*, especificando cuál es su tipo, como veremos a continuación.
 
 
-## Tipos de datos
 
 A continuación estudiaremos los tipos de datos más sencillos: enteros, reales y caracteres. Más adelante se verán otros tipos de datos más complejos, como los vectores, las cadenas de caracteres y los punteros.
 

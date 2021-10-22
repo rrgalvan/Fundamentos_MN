@@ -10,8 +10,8 @@ copyright: Licencia libre bajo los términos Creative Commons Compartir-Igual 3.
 # Structure
 nav:
   - Intro: index.md
-  - Taller 1: 1_primeros_pasos.md
-  - Taller 2: 2_datos_funciones.md
+  - Taller 1: taller_1.md
+  - Taller 2: taller_2.md
   - Más: about.md
 
 markdown_extensions:
