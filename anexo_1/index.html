@@ -8,7 +8,7 @@
         <meta name="author" content="Rafa Rguez. Galván">
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Taller 2 - Fundamentos_MN</title>
+        <title>Taller 2: Arrancando en C: Distancia y Norma - Fundamentos_MN</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -39,8 +39,8 @@
                             <li class="navitem">
                                 <a href="../taller_1/" class="nav-link">Taller 1</a>
                             </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Taller 2</a>
+                            <li class="navitem">
+                                <a href="../taller_2/" class="nav-link">Taller 2</a>
                             </li>
                             <li class="navitem">
                                 <a href="../about/" class="nav-link">Más</a>
@@ -54,17 +54,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../taller_1/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../about/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/rrgalvan/curso-c-numerico/edit/master/docs/taller_2.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/rrgalvan/curso-c-numerico/edit/master/docs/anexo_1.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -84,9 +74,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#taller-2-arrancando-en-c-valor-absoluto-y-norma" class="nav-link">Taller 2: Arrancando en C: Valor absoluto y norma</a>
+            <li class="nav-item" data-level="1"><a href="#taller-2-arrancando-en-c-distancia-y-norma" class="nav-link">Taller 2: Arrancando en C: Distancia y Norma</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#valor-absoluto" class="nav-link">Valor absoluto</a>
+            <li class="nav-item" data-level="2"><a href="#datos-variables-y-expresiones-aritmeticas" class="nav-link">Datos, variables y expresiones aritméticas</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -97,42 +87,43 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="taller-2-arrancando-en-c-valor-absoluto-y-norma">Taller 2: Arrancando en C: Valor absoluto y norma</h1>
-<p>En este taller se exploran las propiedades del valor absoluto y se
-introduce el concepto de norma norma sobre el espacio vectorial
-<span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> utilizando programas en lenguaje C. La idea es
-introducir tanto los conceptos matemáticos como informáticos de forma
-real pero evitando todo lo posible el enredarnos en detalles técnicos,
-definiciones, demostraciones, etc. Todo ello se entiende que será
-objeto de estudio en el futuro.</p>
-<h2 id="valor-absoluto">Valor absoluto</h2>
-<p>Se define el valor absoluto de un número real como:</p>
-<div>
-<div class="MathJax_Preview">
-|x| = \left\{
-    \begin{aligned}
-    x &amp;\mbox{ si } x&gt;0, \\
-    -x &amp;\mbox{ en otro caso.}
-    \end{aligned}
-    \right.
-</div>
-<script type="math/tex; mode=display">
-|x| = \left\{
-    \begin{aligned}
-    x &\mbox{ si } x>0, \\
-    -x &\mbox{ en otro caso.}
-    \end{aligned}
-    \right.
-</script>
-</div>
-<p>En este programa se experimentan las propiedades del valor absoluto. En él se introducen numerosas ideas básicas: variables, comentarios, expresiones aritméticas, bucle <em>while</em>, condicionales, entrada y salida formateadas. Ver los comentarios que aparecen más adelante.</p>
+<h1 id="taller-2-arrancando-en-c-distancia-y-norma">Taller 2: Arrancando en C: Distancia y Norma</h1>
+<p>En este taller se exploran los conceptos de distancia euclídea y
+norma sobre el espacio vectorial <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> utilizando programas
+en lenguaje C. La idea es introducir tanto los conceptos matemáticos
+como informáticos de forma real pero evitando todo lo posible el
+enredarnos en detalles técnicos, definiciones, demostraciones,
+etc. Todo ello se entiende que será objeto de estudio en el futuro.</p>
+<h2 id="datos-variables-y-expresiones-aritmeticas">Datos, variables y expresiones aritméticas</h2>
+<p>Los objetos básicos manipulados por un programa  C son <strong>datos</strong>, contenidos en <strong>variables</strong>. Para actuar sobre estos datos, se utilizan <strong>expresiones</strong> que contienen <em>operadores</em> que actúan sobre ellos.</p>
+<p>Cada objeto (datos, variables) tiene un <strong>tipo</strong> concreto, que determina qué valores puede contener y qué operaciones se pueden realizar sobre él. Antes de utilizar una variable, es necesario <em>declararla</em>, especificando cuál es su tipo, como veremos a continuación.</p>
+<p>A continuación estudiaremos los tipos de datos más sencillos: enteros, reales y caracteres. Más adelante se verán otros tipos de datos más complejos, como los vectores, las cadenas de caracteres y los punteros.</p>
+<h3 id="enteros">Enteros</h3>
+<p>Los enteros son el tipo de dato más primitivo en C. Según el tamaño de los datos que se quiera almacenar, existen distintos tipos de datos enteros: <code>short</code>, <code>int</code>, <code>long</code> y <code>long long</code>. Aunque el tamaño de estos tipos datos puede variar según el compilador y la plataforma de hardware (cada uno de estos tipos de datos puede ocupar desde 1 byte hasta 8 bytes en memoria), el tipo de datos <code>int</code> estándar viene dado por <span><span class="MathJax_Preview">4</span><script type="math/tex">4</script></span> bytes (es decir, <span><span class="MathJax_Preview">4\cdot 8 = 32</span><script type="math/tex">4\cdot 8 = 32</script></span> bits). Puedes encontrar más información en cualquier <a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C/Referencia">guía de referencia de C</a>.</p>
+<p>Además, el lenguaje C hace la distinción de si el entero es con signo (<code>signed</code>) o sin signo (<code>unsigned</code>). En caso de que no se declare si es con signo o sin signo, se toma con signo. El rango de valores de un tipo de datos viene dado por su signo y su tamaño en bytes. Por ejemplo:</p>
+<ul>
+<li>Un entero sin signo (<code>unsigned int</code> o simplemente <code>unsigned</code>) puede almacenar <span><span class="MathJax_Preview">2^{32}=4294967296</span><script type="math/tex">2^{32}=4294967296</script></span> valores, comprendidos entre <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> y <span><span class="MathJax_Preview">4294967295</span><script type="math/tex">4294967295</script></span>.</li>
+</ul>
+<p><img href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IEEE_754_Double_Floating_Point_Format.svg/1024px-IEEE_754_Double_Floating_Point_Format.svg.png"></img></p>
+<ul>
+<li>Un entero con signo (<code>int</code>) reparte estos <span><span class="MathJax_Preview">4294967296</span><script type="math/tex">4294967296</script></span> valores entre <span><span class="MathJax_Preview">-2147483648</span><script type="math/tex">-2147483648</script></span> y <span><span class="MathJax_Preview">2147483647</span><script type="math/tex">2147483647</script></span>.</li>
+</ul>
+<p>¿Qué rango de valores admite un <code>short int</code> estándar, con y sin signo? ¿Y un <code>long int</code>?</p>
+<p>Algunos ejemplos de declaraciones de enteros en C:</p>
+<pre><code>int p;
+unsigned int m, n;
+long q = -10000000;
+</code></pre>
+<h3 id="reales">Reales</h3>
+<p>Para representar números reales no enteros se utiliza la sistema de representación basado en la técnica de coma flotante, que permite operar con números reales de diversas magnitudes, mediante un número decimal llamado mantisa y un exponente que indica el orden de magnitud.</p>
+<p>El tipo de dato flotante en lenguaje C utiliza dos tamaños: <code>float</code> (simple precisión) <code>double</code> (doble precisión), que ocupan 4 bytes y 8 bytes respectivamente. Puedes consultar información concreta sobre el almacenamiento de <a href="https://es.wikipedia.org/wiki/IEEE_754">números en coma flotante, recogida en el estándar IEEE 754-2008</a>. Comprobarás que:</p>
 <pre><code>#include &lt;stdio.h&gt;
 
 int main()
 {
+  int repetir_test = 1;
   float x, y;
   float abs_x, abs_y;
-  int repetir_test = 1;
 
   while (repetir_test) {
     /* Leer dos números reales */
@@ -158,13 +149,13 @@ int main()
     printf("  1) x=%.2f, |x| = %.2f &gt;= 0",    x, abs_x);
     printf("     y=%.2f, |y| = %.2f &gt;= 0\n",  y, abs_y);
     if (x==0)  {
-      printf("     x es cero (luego también |x| lo es)\n");
+      printf("     x es cero (luego también |x| es cero)\n");
     }
     else {
       printf("     x no es cero (luego tampoco |x| lo es)\n");
     }
     if (x==0)
-      printf("     y es cero (luego también |y| lo es)\n");
+      printf("     y es cero (luego también |y| es cero)\n");
     else
       printf("     y no es cero (luego tampoco |y| lo es)\n");
 
@@ -183,25 +174,7 @@ int main()
   }
 
 }
-</code></pre>
-<h3 id="algunos-comentarios">Algunos comentarios:</h3>
-<ol>
-<li>El programa consiste en la definición de una función llamada <em>main</em>, cuyo contenido se especifica en líneas de código contenidas entre llaves {  }. Cada expresión termina con un punto y coma \;</li>
-<li>Las líneas contenidas entre los símbolos /* y */ son comentarios. Éstos son opcionales, es buena idea utilizarlos pero sin abusar de ellos.</li>
-<li>El programa comienza declarando cinco variables, <code>x</code>, <code>y</code>, etc. En, todas las variables deben ser declaradas antes de utilizarse. Las cuatro primeras son de tipo <code>float</code> (número real en coma flotante de simple precisión) y la última es <code>int</code> (entero con signo). Existen otros tipos de datos simple como <code>double</code> (coma flotante de doble precisión) o <code>char</code> (carácter de 1 byte, 8 bits).</li>
-<li>El bucle <code>while</code> opera de la siguiente forma:<ul>
-<li>Primero se evalúa la expresión escrita entre paréntesis (la variable <code>repetir_test</code>).</li>
-<li>Si la condición es verdadera (en este caso, si el entero no es cero), se ejecuta su contenido y al terminar se vuelve a evaluar el condicional.</li>
-<li>Cuando la condición sea falsa, el bucle termina.</li>
-</ul>
-</li>
-<li>La función <code>scanf</code> lee un carácter de la consola de entrada. La expresión de formato <code>"%f"</code> indica coma <em>f</em>flotante. El símbolo <code>&amp;</code> se utiliza para que la variable que lo sigue pueda recibir su valor dentro de la función.</li>
-<li>El bucle <code>if</code> evalúa una expresión (entre paréntesis). Si es verdadera ejecuta la primera expresión (entre llaves, <code>abs_x = x</code>). Si es falsa, ejecuta la segunda expresión en este caso <code>abs_x = -x</code>, después de <code>else</code>.</li>
-<li>Una expresión puede escribirse varias líneas o en una sola, como en la línea <code>if(y&gt;0)</code> etc.</li>
-<li>En una expresión de formato como <code>%.2f</code> se indica el número de dígitos que se desea mostrar tras el punto decimal, en este caso 2.</li>
-<li>Si un bloque de código consta de una sola expresión, como el segundo <code>if (x==0)</code>, las llaves pueden omitirse.</li>
-<li>El <a href="https://es.wikipedia.org/wiki/Operador_ternario">operador ternario de tipo <code>?</code></a> se puede utilizar como substituto de condicionales <code>if</code>.</li>
-</ol></div>
+</code></pre></div>
             </div>
         </div>
 
