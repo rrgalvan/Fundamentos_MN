@@ -31,13 +31,13 @@ int main()
     printf("  1) x=%.2f, |x| = %.2f >= 0,",    x, abs_x);
     printf("     y=%.2f, |y| = %.2f >= 0\n",  y, abs_y);
     if (x==0)  {
-      printf("     x es cero (luego también |x| es cero)\n");
+      printf("     x es cero (luego también |x| lo es)\n");
     }
     else {
       printf("     x no es cero (luego tampoco |x| lo es)\n");
     }
     if (x==0)
-      printf("     y es cero (luego también |y| es cero)\n");
+      printf("     y es cero (luego también |y| lo es)\n");
     else
       printf("     y no es cero (luego tampoco |y| lo es)\n");
 
