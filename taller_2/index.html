@@ -90,6 +90,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#norma-euclidea" class="nav-link">Norma euclídea</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -125,7 +129,13 @@ objeto de estudio en el futuro.</p>
     \right.
 </script>
 </div>
-<p>En este programa se experimentan las propiedades del valor absoluto. En él se introducen numerosas ideas básicas: variables, comentarios, expresiones aritméticas, bucle <em>while</em>, condicionales, entrada y salida formateadas. Ver los comentarios que aparecen más adelante.</p>
+<p>En este programa se experimentan las propiedades del valor absoluto: para todo <span><span class="MathJax_Preview">x,y\in\mathbb R</span><script type="math/tex">x,y\in\mathbb R</script></span>,</p>
+<ol>
+<li><span><span class="MathJax_Preview">|x| \ge 0</span><script type="math/tex">|x| \ge 0</script></span> , siendo <span><span class="MathJax_Preview">|x|=0</span><script type="math/tex">|x|=0</script></span> si y solo si <span><span class="MathJax_Preview">x=0</span><script type="math/tex">x=0</script></span></li>
+<li><span><span class="MathJax_Preview">|x+y| \le |x|+|y|</span><script type="math/tex">|x+y| \le |x|+|y|</script></span></li>
+<li><span><span class="MathJax_Preview">|x \; y | = |x| \cdot |y|</span><script type="math/tex">|x \; y | = |x| \cdot |y|</script></span></li>
+</ol>
+<p>En el programa se introducen numerosas ideas básicas del lenguaje C: variables, comentarios, expresiones aritméticas, bucle <em>while</em>, condicionales, entrada y salida formateadas. Ver los comentarios que aparecen más adelante.</p>
 <pre><code>#include &lt;stdio.h&gt;
 
 int main()
@@ -201,7 +211,130 @@ int main()
 <li>En una expresión de formato como <code>%.2f</code> se indica el número de dígitos que se desea mostrar tras el punto decimal, en este caso 2.</li>
 <li>Si un bloque de código consta de una sola expresión, como el segundo <code>if (x==0)</code>, las llaves pueden omitirse.</li>
 <li>El <a href="https://es.wikipedia.org/wiki/Operador_ternario">operador ternario de tipo <code>?</code></a> se puede utilizar como substituto de condicionales <code>if</code>.</li>
-</ol></div>
+</ol>
+<h2 id="norma-euclidea">Norma euclídea</h2>
+<p>Consideramos ahora el espacio vectorial <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span>, donde <span><span class="MathJax_Preview">n=1,2,3...</span><script type="math/tex">n=1,2,3...</script></span>.
+Introduciremos el concepto de <em>norma</em> de un vector <span><span class="MathJax_Preview">\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb R^n</span><script type="math/tex">\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb R^n</script></span>, que puede entenderse como una generalización del valor absoluto. De hecho, para <span><span class="MathJax_Preview">n=1</span><script type="math/tex">n=1</script></span> los conceptos de norma y valor absoluto coinciden.</p>
+<p>En primer lugar: para <span><span class="MathJax_Preview">n=1</span><script type="math/tex">n=1</script></span>, podemos definir la distancia entre dos números reales como
+$$
+d(x,y)=|x-y|=+\sqrt{(x-y)^2}.
+$$
+Obviamente, la distancia a cero es <span><span class="MathJax_Preview">d(x,0)=|x|</span><script type="math/tex">d(x,0)=|x|</script></span>.</p>
+<p>En general, para cualquier <span><span class="MathJax_Preview">n\in\mathbb N</span><script type="math/tex">n\in\mathbb N</script></span>, definimos la <strong>distancia
+euclídea</strong> entre dos puntos <span><span class="MathJax_Preview">\mathbf x = (x_1,x_2,\dots, x_n)</span><script type="math/tex">\mathbf x = (x_1,x_2,\dots, x_n)</script></span> e  <span><span class="MathJax_Preview">\mathbf
+y=(y_1,y_2,\dots, y_n)</span><script type="math/tex">\mathbf
+y=(y_1,y_2,\dots, y_n)</script></span> como
+$$
+d(\mathbf x, \mathbf y) = +\sqrt{\sum_{i=1}^n (x_i - y_i)^2}.
+$$</p>
+<p>Por ejemplo, la distancia entre los puntos <span><span class="MathJax_Preview">\mathbf x=(2,0)</span><script type="math/tex">\mathbf x=(2,0)</script></span> e <span><span class="MathJax_Preview">\mathbf y=(0,1)</span><script type="math/tex">\mathbf y=(0,1)</script></span> de <span><span class="MathJax_Preview">\mathbb R^2</span><script type="math/tex">\mathbb R^2</script></span> es:
+$$
+d(\mathbf x, \mathbf y) = +\sqrt{(2-0)^2 + (0-1)^2} = +\sqrt{5} \simeq 2.2360679
+$$</p>
+<p>Ahora podemos definir la <strong>norma euclídea</strong> como «la
+distancia a cero». Concretamente, para todo <span><span class="MathJax_Preview">\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
+R^n</span><script type="math/tex">\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
+R^n</script></span>, definimos</p>
+<div>
+<div class="MathJax_Preview">
+\|\mathbf{x}\|
+= +\sqrt{\sum_{i=1}^n x_i^2}.
+</div>
+<script type="math/tex; mode=display">
+\|\mathbf{x}\|
+= +\sqrt{\sum_{i=1}^n x_i^2}.
+</script>
+</div>
+<h3 id="nota">Nota:</h3>
+<p>La norma euclídea también es conocida como «<strong>norma 2</strong>», y se denota <span><span class="MathJax_Preview">\|\mathbf{x}\|_2</span><script type="math/tex">\|\mathbf{x}\|_2</script></span>, pues consiste en elevar a <span><span class="MathJax_Preview">p=2</span><script type="math/tex">p=2</script></span> cada coordenada <span><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> y tomar raíz <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span>--ésima. Puede generalizarse a <span><span class="MathJax_Preview">\|\mathbf{x}\|_p</span><script type="math/tex">\|\mathbf{x}\|_p</script></span> para otros valores de <span><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> (no necesariamente <span><span class="MathJax_Preview">p=2</span><script type="math/tex">p=2</script></span>).</p>
+<h3 id="propiedades-de-la-norma">Propiedades de la norma</h3>
+<p>La norma tiene propiedades muy similares al valor absoluto.
+Para todo <span><span class="MathJax_Preview">\mathbf x, \mathbf y\in\mathbb R^n</span><script type="math/tex">\mathbf x, \mathbf y\in\mathbb R^n</script></span>, y para todo <span><span class="MathJax_Preview">\alpha\in\mathbb R</span><script type="math/tex">\alpha\in\mathbb R</script></span>:</p>
+<ol>
+<li><span><span class="MathJax_Preview">\|\mathbf x\| \ge 0</span><script type="math/tex">\|\mathbf x\| \ge 0</script></span> , siendo <span><span class="MathJax_Preview">|\mathbf x|=0</span><script type="math/tex">|\mathbf x|=0</script></span> si y solo si <span><span class="MathJax_Preview">\mathbf x=0</span><script type="math/tex">\mathbf x=0</script></span></li>
+<li><span><span class="MathJax_Preview">\|\mathbf x+\mathbf y\| \le \|\mathbf x\|+\|\mathbf y\|</span><script type="math/tex">\|\mathbf x+\mathbf y\| \le \|\mathbf x\|+\|\mathbf y\|</script></span></li>
+<li><span><span class="MathJax_Preview">\| \alpha \; \mathbf x \| = |\alpha| \cdot \|\mathbf x\|</span><script type="math/tex">\| \alpha \; \mathbf x \| = |\alpha| \cdot \|\mathbf x\|</script></span></li>
+</ol>
+<p>En el siguiente programa se experimenta con estas propiedades en <span><span class="MathJax_Preview">\mathbb R^2</span><script type="math/tex">\mathbb R^2</script></span>:</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+// Devuelve el valor absoluto de un número real, x, en doble precisión
+double valor_abs(double x)
+{
+  double result;
+  if(x&gt;=0) {
+    result = x;
+  }
+  else {
+    result = -x;
+  }
+  return result;
+}
+
+// Devuelve la norma euclídea de un vector (x1, x2), con argumentos en doble precisión //
+double norma_euclidea(double x1, double x2)
+{
+  return sqrt(x1*x1 + x2*x2);
+}
+
+
+int main()
+{
+  int repetir_test = 1;
+  double x1, x2;
+  double y1, y2;
+  double a;
+  double norma_x, norma_y;
+
+  while(repetir_test)
+    {
+    /* Leer dos números reales */
+    printf("Introduce un vector  x1 x2  (2 reales separados por espacios): ");
+    scanf("%lf %lf", &amp;x1, &amp;x2);
+    printf("Introduce un vector  y1 y2  (2 reales separados por espacios): ");
+    scanf("%lf %lf", &amp;y1, &amp;y2);
+
+    norma_x = norma_euclidea(x1, x2);
+    norma_y = norma_euclidea(y1, y2);
+
+    printf("Comprobamos que se verifican las propiedades de la norma:\n");
+
+    /* Comprobar la primera propiedad de norma */
+    printf("  1) x=(%.2lf,%.2lf), ||x|| = %.3lf &gt;= 0,",  x1, x2, norma_x);
+    printf("     y=(%.2lf,%.2lf), ||y|| = %.3lf &gt;= 0\n", y1, y2, norma_y);
+    if (norma_x==0)  {
+      printf("     ||x|| es cero (luego x es el vector nulo)\n");
+    }
+    else {
+      printf("     ||x|| no es cero (luego x no es el vector nulo)\n");
+    }
+    if (norma_y==0)  {
+      printf("     ||y|| es cero (luego y es el vector nulo)\n");
+    }
+    else {
+      printf("     ||y|| no es cero (luego y no es el vector nulo)\n");
+    }
+
+    /* Comprobar la segunda propiedad de la norma */
+    printf("  2) ||x+y|| = %.3f es menor o igual que ||x|| + ||y|| = %.3f\n",
+           norma_euclidea(x1+y1, x2+y2), norma_x + norma_y);
+
+    /* Comprobar la tercera propiedad de la norma */
+    printf("Introduce un escalar, a (nº real, doble precisión): ");
+    scanf("%lf", &amp;a);
+    printf("  3) ||a·x|| = %lf = |a|·||x|| (= %lf · %lf) \n",
+           norma_euclidea(a*x1, a*x2), valor_abs(a), norma_euclidea(x1, x2));
+
+    /* Repetir test o terminar */
+    printf("... introduce 0 para terminar o un entero no nulo para repetir: ");
+    scanf("%d", &amp;repetir_test);
+  }
+
+}
+</code></pre>
+<h3 id="algunos-comentarios_1">Algunos comentarios:</h3>
+<p>(¡en la próxima versión!)</p></div>
             </div>
         </div>
 
