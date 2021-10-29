@@ -22,7 +22,13 @@ $$
     \right.
 $$
 
-En este programa se experimentan las propiedades del valor absoluto. En él se introducen numerosas ideas básicas: variables, comentarios, expresiones aritméticas, bucle *while*, condicionales, entrada y salida formateadas. Ver los comentarios que aparecen más adelante.
+En este programa se experimentan las propiedades del valor absoluto: para todo $x,y\in\mathbb R$,
+
+1. $|x| \ge 0$ , siendo $|x|=0$ si y solo si $x=0$
+2. $|x+y| \le |x|+|y|$
+3. $|x \; y | = |x| \cdot |y|$
+
+En el programa se introducen numerosas ideas básicas del lenguaje C: variables, comentarios, expresiones aritméticas, bucle *while*, condicionales, entrada y salida formateadas. Ver los comentarios que aparecen más adelante.
 
     #include <stdio.h>
 
@@ -97,3 +103,48 @@ En este programa se experimentan las propiedades del valor absoluto. En él se i
 8. En una expresión de formato como `%.2f` se indica el número de dígitos que se desea mostrar tras el punto decimal, en este caso 2.
 9. Si un bloque de código consta de una sola expresión, como el segundo `if (x==0)`, las llaves pueden omitirse.
 10. El [operador ternario de tipo `?`](https://es.wikipedia.org/wiki/Operador_ternario) se puede utilizar como substituto de condicionales `if`.
+
+## Norma euclídea
+
+Consideramos ahora el espacio vectorial $\mathbb R^n$, donde $n=1,2,3...$.
+Introduciremos el concepto de *norma* de un vector $\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb R^n$, que puede entenderse como una generalización del valor absoluto. De hecho, para $n=1$ los conceptos de norma y valor absoluto coinciden.
+
+En primer lugar: para $n=1$, podemos definir la distancia entre dos números reales como
+$$
+d(x,y)=|x-y|=+\sqrt{(x-y)^2}.
+$$
+Obviamente, la distancia a cero es $d(x,0)=|x|$.
+
+En general, para cualquier $n\in\mathbb N$, definimos la **distancia
+euclídea** entre dos puntos $\mathbf x = (x_1,x_2,\dots, x_n)$ e  $\mathbf
+y=(y_1,y_2,\dots, y_n)$ como
+$$
+d(\mathbf x, \mathbf y) = +\sqrt{\sum_{i=1}^n (x_i - y_i)^2}.
+$$
+
+Por ejemplo, la distancia entre los puntos $\mathbf x=(2,0)$ e $\mathbf y=(0,1)$ de $\mathbb R^2$ es:
+$$
+d(\mathbf x, \mathbf y) = +\sqrt{(2-0)^2 + (0-1)^2} = +\sqrt{5} \simeq 2.2360679
+$$
+
+Ahora podemos definir la **norma euclídea** como «la
+distancia a cero». Concretamente, para todo $\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
+R^n$, definimos
+
+$$
+\|\mathbf{x}\|
+= +\sqrt{\sum_{i=1}^n x_i^2}.
+$$
+
+### Nota:
+
+La norma euclídea también es conocida como «**norma 2**», y se denota $\|\mathbf{x}\|_2$, pues consiste en elevar a $p=2$ cada coordenada $x_i$ y tomar raíz $p$--ésima. Puede generalizarse a $\|\mathbf{x}\|_p$ para otros valores de $p$ (no necesariamente $p=2$).
+
+### Propiedades de la norma
+
+La norma tiene propiedades muy similares al valor absoluto.
+Para todo $\mathbf x, \mathbf y\in\mathbb R^n$, y para todo $\alpha\in\mathbb R$:
+
+1. $\|\mathbf x\| \ge 0$ , siendo $|\mathbf x|=0$ si y solo si $\mathbf x=0$
+2. $\|\mathbf x+\mathbf y\| \le \|\mathbf x\|+\|\mathbf y\|$
+3. $\| \alpha \; \mathbf y \| = |\alpha| \cdot \|\mathbf y\|$
