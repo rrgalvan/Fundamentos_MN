@@ -6,8 +6,8 @@ int main()
   float x, y;
   float abs_x, abs_y;
 
-  while(repetir_test) {
-
+  while(repetir_test)
+    {
     /* Leer dos números reales */
     printf("Introduce un número real, x: ");
     scanf("%f", &x);

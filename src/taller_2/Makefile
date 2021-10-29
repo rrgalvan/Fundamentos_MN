@@ -1,9 +1,12 @@
-CC  = gcc
+CC = gcc
 CFLAGS = -lm
 
-TARGET = valor_absoluto
+TARGET = valor_absoluto norma_euclidea
 
 all: $(TARGET)
 
-%.o: %.c
-	$(CC) $(CFLAGS) $< -o $@
+%: %.c
+	$(CC) $< -o $@ $(CFLAGS)
+
+clean:
+	rm -f $(TARGET)
