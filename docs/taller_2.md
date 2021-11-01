@@ -267,7 +267,7 @@ Por ejemplo, para el vector $\mathbf x = (2, -3, 1)$ tendremos:
 - $\|\mathbf x\|_2 = +\sqrt{14} \simeq 3.74165738$
 - $\|\mathbf x\|_\infty = 3$
 
-## Ejercicios: jugando con la norma
+## Ejercicios: jugando con normas
 
 ### Ejercicio 1 (¡fácil!)
 Modifica el programa anterior, sustituyendo la función `norma_euclidea` por otra llamada `norma_uno` y comprueba con ejemplos que la norma 1 verifica las propiedades de norma enumeradas anteriormente. Repite el proceso definiendo la función `norma_infinito`. Para definir estas funciones, te será útil utilizar la función `valor_abs`.
@@ -276,19 +276,24 @@ Modifica el programa anterior, sustituyendo la función `norma_euclidea` por otr
 Realiza un programa que, tras leer un vector $\mathbf x \in R^3$,  imprima $\|\mathbf x\|_1$, $\|\mathbf x\|_2$ y $\|\mathbf x\|_\infty$. Compruébalo con  $\mathbf x = (2, -3, 1)$ y con otros ejemplos.
 
 ### Ejercicio 3 (¿un poco más difícil?)
-Como podrás ver en los resultados del programa anterior, siempre se tiene el siguiente resultado:
+Como podrás ver en los resultados del programa anterior, siempre se tiene que
 $$
     \|\mathbf x\|_\infty \le \|\mathbf x\|_2 \le \|\mathbf x\|_1.
 $$
 ¿Puedes demostrar alguna de estas dos desigualdades? ¡Ojo no vale demostrar con ejemplos! En matemáticas, una afirmación no es cierta, por muchos ejemplos que parezcan confirmarla, hasta que es demostrada mediante un razonamiento formal.
 
 ### Ejercicio 4 (¡fácil!)
-Se dice que dos normas $\|\cdot\|_A$ y $\|\cdot\|_B$ **son equivalentes** si existen dos constantes, $C_1$ y $C_2$ tales que (para todo $\mathbf x$) se verifican las dos desigualdades siguientes:
+Llamamos norma sobre $\mathbb R^n$ a cualquier aplicación $\| \cdot
+\|: \mathbb R^n \to \mathbb R^+$ que verifique las propiedades 1, 2 y
+3 que fueron enunciadas anteriormente (para la norma euclídea).  Se dice que
+dos normas $\|\cdot\|_A$ y $\|\cdot\|_B$ **son equivalentes** si
+existen dos constantes positivas, $C_1$ y $C_2$ tales que (para todo $\mathbf
+x$) se verifican las dos desigualdades siguientes:
 
 - $\|\mathbf x\|_A \le C_1 \, \|\mathbf x \|_B$
 - $\|\mathbf x\|_B \le C_2 \, \|\mathbf x \|_A$
 
-Ya sabemos, por el ejercicio anterior, que $\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2$, con $C_1=1$. Vamos a experimentar con el ordenador si  $\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty$ para alguna constante $C_2$. Para ello, realiza un programa que, tras leer el valor de un vector, imprima:
+Ya sabemos, por el ejercicio anterior, que $\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2$, con $C_1=1$. Vamos a experimentar con el ordenador si  $\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty$ para alguna constante $C_2$. Para ello, realiza un programa que, tras leer el valor de un vector $\mathbf x = (x_1,x_2)\in \mathbb R^2$, imprima:
 
 1. Los valores de  $\|\mathbf x\|_2$ y $\|\mathbf x\|_\infty$
 2. El cociente
@@ -297,10 +302,17 @@ $$
 \frac{\|\mathbf x\|_2} {\|\mathbf x\|_\infty}
 $$
 
-Prueba con muchos ejemplos. A la vista de estos ejemplos, ¿podría parecer que este cociente siempre (para todo $\mathbf x$) está acotado superiormente por algún valor $C_2$? Si es así, ¡esa sería la constante que estamos buscando!
+Prueba con muchos ejemplos. A la vista de ellos, ¿podrías conjeturar
+que este cociente siempre (para todo $\mathbf x\in \mathbb R^2$) está
+acotado superiormente por algún valor $C_2$? Si es así, ¡esa sería la
+constante que estamos buscando!
 
 ### *Spoiler* al ejercicio anterior
-Sí que existe esa constante $C_2$ tal que $\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty$. De hecho, estas dos normas son equivalentes en $\mathbb R^n$ (de hecho, en todo espacio finito-dimensional, aunque ¡en *espacios de dimensión infinita*, esta afirmación no es cierta!).
+Esa constante, $C_2$ tal que $\|\mathbf x\|_2 \le C_2 \, \|\mathbf x
+\|_\infty$, sí que existe. Y estas dos normas son equivalentes en
+$\mathbb R^n$ (de hecho, en todo espacio finito-dimensional, aunque
+¡en *espacios de dimensión infinita*, esta afirmación no es cierta!
+para las normas $\infty$ y 2 generalizadas).
 
 También la norma 1 es equivalente con las anteriores. De hecho se tiene el siguiente resultado (que se demuestra en el Grado en Matemáticas):
 #### Teorema
