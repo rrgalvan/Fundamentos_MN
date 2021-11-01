@@ -94,6 +94,14 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#norma-1-y-norma-infinito" class="nav-link">Norma 1 y norma infinito</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ejercicios-jugando-con-la-norma" class="nav-link">Ejercicios: jugando con la norma</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -192,7 +200,8 @@ int main()
     scanf("%d", &amp;repetir_test);
   }
 
-}
+return 0;
+ }
 </code></pre>
 <h3 id="algunos-comentarios">Algunos comentarios:</h3>
 <ol>
@@ -205,7 +214,7 @@ int main()
 <li>Cuando la condición sea falsa, el bucle termina.</li>
 </ul>
 </li>
-<li>La función <code>scanf</code> lee un carácter de la consola de entrada. La expresión de formato <code>"%f"</code> indica coma <em>f</em>flotante. El símbolo <code>&amp;</code> se utiliza para que la variable que lo sigue pueda recibir su valor dentro de la función.</li>
+<li>La función <code>scanf</code> lee un carácter de la consola de entrada. La expresión de formato <code>"%f"</code> indica coma <em>f</em>flotante. El símbolo <code>&amp;</code> se utiliza para que la variable que lo sigue pueda recibir su valor dentro de la función. Técnicamente, este símbolo indica que el parámetro se pasa <em>por referencia</em>. Hablaremos más de esto en próximos talleres.</li>
 <li>El bucle <code>if</code> evalúa una expresión (entre paréntesis). Si es verdadera ejecuta la primera expresión (entre llaves, <code>abs_x = x</code>). Si es falsa, ejecuta la segunda expresión en este caso <code>abs_x = -x</code>, después de <code>else</code>.</li>
 <li>Una expresión puede escribirse varias líneas o en una sola, como en la línea <code>if(y&gt;0)</code> etc.</li>
 <li>En una expresión de formato como <code>%.2f</code> se indica el número de dígitos que se desea mostrar tras el punto decimal, en este caso 2.</li>
@@ -331,10 +340,96 @@ int main()
     scanf("%d", &amp;repetir_test);
   }
 
+return 0;
 }
 </code></pre>
 <h3 id="algunos-comentarios_1">Algunos comentarios:</h3>
-<p>(¡en la próxima versión!)</p></div>
+<ol>
+<li>
+<p>En el programa hemos definido dos funciones matemáticas (antes de ser usadas en la función <em>main</em>) para representar, respectivamente, a los concpetos de valor absoluto de un número real <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> y norma euclídea de un vector de <span><span class="MathJax_Preview">\mathbb R^2</span><script type="math/tex">\mathbb R^2</script></span>, <span><span class="MathJax_Preview">(x_1, x_2)</span><script type="math/tex">(x_1, x_2)</script></span>.</p>
+<ol>
+<li>La función <code>valor_abs</code> toma como parámetro un número real en doble precisión (<code>double</code>) y devuelve un número del mismo tipo</li>
+<li>La función <code>norma_euclidea</code> toma dos parámetros reales, <code>x1</code> y <code>x2</code> y devuelve la norma euclídea del vector correspondiente. En el cuerpo de la función se utiliza la función <code>sqrt</code> de la biblioteca matemática. Para poder utilizarla, se debe incluir la biblioteca <code>math.h</code> (al principio del programa) y (al menos para el compilador <em>gcc</em>) el programa debe enlazarse con esta biblioteca, utilizando la opción <code>-lm</code>. Esta opción vendrá dada «de serie» por algunos entornos de compilación. En otros casos, como con el editor <em>Atom</em>, es probable que debamos especificarlo en la configuración del paquete correspondiente.</li>
+</ol>
+</li>
+<li>
+<p>Estas funciones se podrían haber definido después de <em>main</em>, pero en ese caso deberían haber sido declaradas en el <em>preámbulo</em> (antes de <em>main</em>). La forma declarar una función es:</p>
+<pre><code>tipo nombre_función (tipo param1, tipo param2, ...);
+</code></pre>
+</li>
+<li>
+<p>Es fundamental habituarse a descomponer los programas C en funciones, que funcionarán como módulos independientes encargados de realizar tareas específicas. La <a href="https://es.wikipedia.org/wiki/Programaci%C3%B3n_modular">programación modular</a> es un paradigma de programación que consiste en dividir un programa en módulos o subprogramas con el fin de hacerlo más legible y manejable.</p>
+</li>
+</ol>
+<div  align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Subprograma.svg" width="33%"></div>
+
+<h2 id="norma-1-y-norma-infinito">Norma 1 y norma infinito</h2>
+<p>Además de la euclídea, existen dos normas en <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> muy usadas:</p>
+<ul>
+<li>La <strong>norma 1</strong>, definida para cada <span><span class="MathJax_Preview">\mathbf x = (x_1,\dots,x_n)</span><script type="math/tex">\mathbf x = (x_1,\dots,x_n)</script></span> como</li>
+</ul>
+<div>
+<div class="MathJax_Preview">
+\|\mathbf x\|_1 = \sum_{i=1}^n |x_i|.
+</div>
+<script type="math/tex; mode=display">
+\|\mathbf x\|_1 = \sum_{i=1}^n |x_i|.
+</script>
+</div>
+<ul>
+<li>La <strong>norma infinito</strong>, que para cada <span><span class="MathJax_Preview">\mathbf x = (x_1,\dots,x_n)</span><script type="math/tex">\mathbf x = (x_1,\dots,x_n)</script></span> se define como</li>
+</ul>
+<div>
+<div class="MathJax_Preview">
+\|\mathbf x\|_\infty = \mbox{máx} (|x_1|, |x_2|,\dots, |x_n| ).
+</div>
+<script type="math/tex; mode=display">
+\|\mathbf x\|_\infty = \mbox{máx} (|x_1|, |x_2|,\dots, |x_n| ).
+</script>
+</div>
+<p>Por ejemplo, para el vector <span><span class="MathJax_Preview">\mathbf x = (2, -3, 1)</span><script type="math/tex">\mathbf x = (2, -3, 1)</script></span> tendremos:</p>
+<ul>
+<li><span><span class="MathJax_Preview">\|\mathbf x\|_1 = 6</span><script type="math/tex">\|\mathbf x\|_1 = 6</script></span></li>
+<li><span><span class="MathJax_Preview">\|\mathbf x\|_2 = +\sqrt{14} \simeq 3.74165738</span><script type="math/tex">\|\mathbf x\|_2 = +\sqrt{14} \simeq 3.74165738</script></span></li>
+<li><span><span class="MathJax_Preview">\|\mathbf x\|_\infty = 3</span><script type="math/tex">\|\mathbf x\|_\infty = 3</script></span></li>
+</ul>
+<h2 id="ejercicios-jugando-con-la-norma">Ejercicios: jugando con la norma</h2>
+<h3 id="ejercicio-1-facil">Ejercicio 1 (¡fácil!)</h3>
+<p>Modifica el programa anterior, sustituyendo la función <code>norma_euclidea</code> por otra llamada <code>norma_uno</code> y comprueba con ejemplos que la norma 1 verifica las propiedades de norma enumeradas anteriormente. Repite el proceso definiendo la función <code>norma_infinito</code>. Para definir estas funciones, te será útil utilizar la función <code>valor_abs</code>.</p>
+<h3 id="ejercicio-2-facil">Ejercicio 2 (¡fácil!)</h3>
+<p>Realiza un programa que, tras leer un vector <span><span class="MathJax_Preview">\mathbf x \in R^3</span><script type="math/tex">\mathbf x \in R^3</script></span>,  imprima <span><span class="MathJax_Preview">\|\mathbf x\|_1</span><script type="math/tex">\|\mathbf x\|_1</script></span>, <span><span class="MathJax_Preview">\|\mathbf x\|_2</span><script type="math/tex">\|\mathbf x\|_2</script></span> y <span><span class="MathJax_Preview">\|\mathbf x\|_\infty</span><script type="math/tex">\|\mathbf x\|_\infty</script></span>. Compruébalo con  <span><span class="MathJax_Preview">\mathbf x = (2, -3, 1)</span><script type="math/tex">\mathbf x = (2, -3, 1)</script></span> y con otros ejemplos.</p>
+<h3 id="ejercicio-3-un-poco-mas-dificil">Ejercicio 3 (¿un poco más difícil?)</h3>
+<p>Como podrás ver en los resultados del programa anterior, siempre se tiene el siguiente resultado:
+$$
+    |\mathbf x|_\infty \le |\mathbf x|_2 \le |\mathbf x|_1.
+$$
+¿Puedes demostrar alguna de estas dos desigualdades? ¡Ojo no vale demostrar con ejemplos! En matemáticas, una afirmación no es cierta, por muchos ejemplos que parezcan confirmarla, hasta que es demostrada mediante un razonamiento formal.</p>
+<h3 id="ejercicio-4-facil">Ejercicio 4 (¡fácil!)</h3>
+<p>Se dice que dos normas <span><span class="MathJax_Preview">\|\cdot\|_A</span><script type="math/tex">\|\cdot\|_A</script></span> y <span><span class="MathJax_Preview">\|\cdot\|_B</span><script type="math/tex">\|\cdot\|_B</script></span> <strong>son equivalentes</strong> si existen dos constantes, <span><span class="MathJax_Preview">C_1</span><script type="math/tex">C_1</script></span> y <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span> tales que (para todo <span><span class="MathJax_Preview">\mathbf x</span><script type="math/tex">\mathbf x</script></span>) se verifican las dos desigualdades siguientes:</p>
+<ul>
+<li><span><span class="MathJax_Preview">\|\mathbf x\|_A \le C_1 \, \|\mathbf x \|_B</span><script type="math/tex">\|\mathbf x\|_A \le C_1 \, \|\mathbf x \|_B</script></span></li>
+<li><span><span class="MathJax_Preview">\|\mathbf x\|_B \le C_2 \, \|\mathbf x \|_A</span><script type="math/tex">\|\mathbf x\|_B \le C_2 \, \|\mathbf x \|_A</script></span></li>
+</ul>
+<p>Ya sabemos, por el ejercicio anterior, que <span><span class="MathJax_Preview">\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2</span><script type="math/tex">\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2</script></span>, con <span><span class="MathJax_Preview">C_1=1</span><script type="math/tex">C_1=1</script></span>. Vamos a experimentar con el ordenador si  <span><span class="MathJax_Preview">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</span><script type="math/tex">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</script></span> para alguna constante <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span>. Para ello, realiza un programa que, tras leer el valor de un vector, imprima:</p>
+<ol>
+<li>Los valores de  <span><span class="MathJax_Preview">\|\mathbf x\|_2</span><script type="math/tex">\|\mathbf x\|_2</script></span> y <span><span class="MathJax_Preview">\|\mathbf x\|_\infty</span><script type="math/tex">\|\mathbf x\|_\infty</script></span></li>
+<li>El cociente</li>
+</ol>
+<div>
+<div class="MathJax_Preview">
+\frac{\|\mathbf x\|_2} {\|\mathbf x\|_\infty}
+</div>
+<script type="math/tex; mode=display">
+\frac{\|\mathbf x\|_2} {\|\mathbf x\|_\infty}
+</script>
+</div>
+<p>Prueba con muchos ejemplos. A la vista de estos ejemplos, ¿podría parecer que este cociente siempre (para todo <span><span class="MathJax_Preview">\mathbf x</span><script type="math/tex">\mathbf x</script></span>) está acotado superiormente por algún valor <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span>? Si es así, ¡esa sería la constante que estamos buscando!</p>
+<h3 id="spoiler-al-ejercicio-anterior"><em>Spoiler</em> al ejercicio anterior</h3>
+<p>Sí que existe esa constante <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span> tal que <span><span class="MathJax_Preview">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</span><script type="math/tex">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</script></span>. De hecho, estas dos normas son equivalentes en <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> (de hecho, en todo espacio finito-dimensional, aunque ¡en <em>espacios de dimensión infinita</em>, esta afirmación no es cierta!).</p>
+<p>También la norma 1 es equivalente con las anteriores. De hecho se tiene el siguiente resultado (que se demuestra en el Grado en Matemáticas):</p>
+<h4 id="teorema">Teorema</h4>
+<p><strong>Todas</strong> las normas en <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> <strong>son equivalentes</strong>.</p>
+<p>Eso sí, el teorema no da los valores de las constantes <span><span class="MathJax_Preview">C_1</span><script type="math/tex">C_1</script></span> y <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span>, estos deben calcularse para cada caso particular.</p></div>
             </div>
         </div>
 
