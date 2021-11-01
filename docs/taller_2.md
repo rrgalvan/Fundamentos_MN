@@ -85,9 +85,8 @@ En el programa se introducen numerosas ideas básicas del lenguaje C: variables,
         printf("... introduce 0 para terminar o un entero no nulo para repetir: ");
         scanf("%d", &repetir_test);
       }
-
-    return 0;
-     }
+      return 0;
+    }
 
 ### Algunos comentarios:
 
@@ -129,7 +128,7 @@ d(\mathbf x, \mathbf y) = +\sqrt{(2-0)^2 + (0-1)^2} = +\sqrt{5} \simeq 2.2360679
 $$
 
 Ahora podemos definir la **norma euclídea** como «la
-distancia a cero». Concretamente, para todo $\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
+distancia a cero» o «el módulo» de un vector. Concretamente, para todo $\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
 R^n$, definimos
 
 $$
@@ -226,8 +225,7 @@ En el siguiente programa se experimenta con estas propiedades en $\mathbb R^2$:
         printf("... introduce 0 para terminar o un entero no nulo para repetir: ");
         scanf("%d", &repetir_test);
       }
-
-    return 0;
+      return 0;
     }
 
 ### Algunos comentarios:
@@ -235,7 +233,7 @@ En el siguiente programa se experimenta con estas propiedades en $\mathbb R^2$:
 1. En el programa hemos definido dos funciones matemáticas (antes de ser usadas en la función *main*) para representar, respectivamente, a los concpetos de valor absoluto de un número real $x$ y norma euclídea de un vector de $\mathbb R^2$, $(x_1, x_2)$.
 
     1. La función `valor_abs` toma como parámetro un número real en doble precisión (`double`) y devuelve un número del mismo tipo
-    2. La función `norma_euclidea` toma dos parámetros reales, `x1` y `x2` y devuelve la norma euclídea del vector correspondiente. En el cuerpo de la función se utiliza la función `sqrt` de la biblioteca matemática. Para poder utilizarla, se debe incluir la biblioteca `math.h` (al principio del programa) y (al menos para el compilador *gcc*) el programa debe enlazarse con esta biblioteca, utilizando la opción `-lm`. Esta opción vendrá dada «de serie» por algunos entornos de compilación. En otros casos, como con el editor *Atom*, es probable que debamos especificarlo en la configuración del paquete correspondiente.
+    2. La función `norma_euclidea` toma dos parámetros,  `x1` y `x2`, también de tipo coma flotante en doble precisión, y devuelve la norma euclídea del vector correspondiente. En el cuerpo de la función se utiliza la función `sqrt` de la biblioteca matemática. Para poder utilizarla, se debe incluir la biblioteca `math.h` (al principio del programa) y (al menos para el compilador *gcc*) el programa debe enlazarse con esta biblioteca, utilizando la opción `-lm`. Esta opción vendrá dada «de serie» por algunos entornos de compilación. En otros casos, como con el editor *Atom*, es probable que debamos especificarlo en la configuración del paquete correspondiente.
 
 2. Estas funciones se podrían haber definido después de *main*, pero en ese caso deberían haber sido declaradas en el *preámbulo* (antes de *main*). La forma declarar una función es:
 
