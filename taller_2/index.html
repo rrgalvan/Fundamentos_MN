@@ -98,7 +98,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#ejercicios-jugando-con-la-norma" class="nav-link">Ejercicios: jugando con la norma</a>
+            <li class="nav-item" data-level="2"><a href="#ejercicios-jugando-con-normas" class="nav-link">Ejercicios: jugando con normas</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -393,24 +393,31 @@ return 0;
 <li><span><span class="MathJax_Preview">\|\mathbf x\|_2 = +\sqrt{14} \simeq 3.74165738</span><script type="math/tex">\|\mathbf x\|_2 = +\sqrt{14} \simeq 3.74165738</script></span></li>
 <li><span><span class="MathJax_Preview">\|\mathbf x\|_\infty = 3</span><script type="math/tex">\|\mathbf x\|_\infty = 3</script></span></li>
 </ul>
-<h2 id="ejercicios-jugando-con-la-norma">Ejercicios: jugando con la norma</h2>
+<h2 id="ejercicios-jugando-con-normas">Ejercicios: jugando con normas</h2>
 <h3 id="ejercicio-1-facil">Ejercicio 1 (¡fácil!)</h3>
 <p>Modifica el programa anterior, sustituyendo la función <code>norma_euclidea</code> por otra llamada <code>norma_uno</code> y comprueba con ejemplos que la norma 1 verifica las propiedades de norma enumeradas anteriormente. Repite el proceso definiendo la función <code>norma_infinito</code>. Para definir estas funciones, te será útil utilizar la función <code>valor_abs</code>.</p>
 <h3 id="ejercicio-2-facil">Ejercicio 2 (¡fácil!)</h3>
 <p>Realiza un programa que, tras leer un vector <span><span class="MathJax_Preview">\mathbf x \in R^3</span><script type="math/tex">\mathbf x \in R^3</script></span>,  imprima <span><span class="MathJax_Preview">\|\mathbf x\|_1</span><script type="math/tex">\|\mathbf x\|_1</script></span>, <span><span class="MathJax_Preview">\|\mathbf x\|_2</span><script type="math/tex">\|\mathbf x\|_2</script></span> y <span><span class="MathJax_Preview">\|\mathbf x\|_\infty</span><script type="math/tex">\|\mathbf x\|_\infty</script></span>. Compruébalo con  <span><span class="MathJax_Preview">\mathbf x = (2, -3, 1)</span><script type="math/tex">\mathbf x = (2, -3, 1)</script></span> y con otros ejemplos.</p>
 <h3 id="ejercicio-3-un-poco-mas-dificil">Ejercicio 3 (¿un poco más difícil?)</h3>
-<p>Como podrás ver en los resultados del programa anterior, siempre se tiene el siguiente resultado:
+<p>Como podrás ver en los resultados del programa anterior, siempre se tiene que
 $$
     |\mathbf x|_\infty \le |\mathbf x|_2 \le |\mathbf x|_1.
 $$
 ¿Puedes demostrar alguna de estas dos desigualdades? ¡Ojo no vale demostrar con ejemplos! En matemáticas, una afirmación no es cierta, por muchos ejemplos que parezcan confirmarla, hasta que es demostrada mediante un razonamiento formal.</p>
 <h3 id="ejercicio-4-facil">Ejercicio 4 (¡fácil!)</h3>
-<p>Se dice que dos normas <span><span class="MathJax_Preview">\|\cdot\|_A</span><script type="math/tex">\|\cdot\|_A</script></span> y <span><span class="MathJax_Preview">\|\cdot\|_B</span><script type="math/tex">\|\cdot\|_B</script></span> <strong>son equivalentes</strong> si existen dos constantes, <span><span class="MathJax_Preview">C_1</span><script type="math/tex">C_1</script></span> y <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span> tales que (para todo <span><span class="MathJax_Preview">\mathbf x</span><script type="math/tex">\mathbf x</script></span>) se verifican las dos desigualdades siguientes:</p>
+<p>Llamamos norma sobre <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> a cualquier aplicación <span><span class="MathJax_Preview">\| \cdot
+\|: \mathbb R^n \to \mathbb R^+</span><script type="math/tex">\| \cdot
+\|: \mathbb R^n \to \mathbb R^+</script></span> que verifique las propiedades 1, 2 y
+3 que fueron enunciadas anteriormente (para la norma euclídea).  Se dice que
+dos normas <span><span class="MathJax_Preview">\|\cdot\|_A</span><script type="math/tex">\|\cdot\|_A</script></span> y <span><span class="MathJax_Preview">\|\cdot\|_B</span><script type="math/tex">\|\cdot\|_B</script></span> <strong>son equivalentes</strong> si
+existen dos constantes positivas, <span><span class="MathJax_Preview">C_1</span><script type="math/tex">C_1</script></span> y <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span> tales que (para todo <span><span class="MathJax_Preview">\mathbf
+x</span><script type="math/tex">\mathbf
+x</script></span>) se verifican las dos desigualdades siguientes:</p>
 <ul>
 <li><span><span class="MathJax_Preview">\|\mathbf x\|_A \le C_1 \, \|\mathbf x \|_B</span><script type="math/tex">\|\mathbf x\|_A \le C_1 \, \|\mathbf x \|_B</script></span></li>
 <li><span><span class="MathJax_Preview">\|\mathbf x\|_B \le C_2 \, \|\mathbf x \|_A</span><script type="math/tex">\|\mathbf x\|_B \le C_2 \, \|\mathbf x \|_A</script></span></li>
 </ul>
-<p>Ya sabemos, por el ejercicio anterior, que <span><span class="MathJax_Preview">\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2</span><script type="math/tex">\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2</script></span>, con <span><span class="MathJax_Preview">C_1=1</span><script type="math/tex">C_1=1</script></span>. Vamos a experimentar con el ordenador si  <span><span class="MathJax_Preview">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</span><script type="math/tex">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</script></span> para alguna constante <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span>. Para ello, realiza un programa que, tras leer el valor de un vector, imprima:</p>
+<p>Ya sabemos, por el ejercicio anterior, que <span><span class="MathJax_Preview">\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2</span><script type="math/tex">\|\mathbf x\|_\infty \le C_1 \|\mathbf x\|_2</script></span>, con <span><span class="MathJax_Preview">C_1=1</span><script type="math/tex">C_1=1</script></span>. Vamos a experimentar con el ordenador si  <span><span class="MathJax_Preview">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</span><script type="math/tex">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</script></span> para alguna constante <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span>. Para ello, realiza un programa que, tras leer el valor de un vector <span><span class="MathJax_Preview">\mathbf x = (x_1,x_2)\in \mathbb R^2</span><script type="math/tex">\mathbf x = (x_1,x_2)\in \mathbb R^2</script></span>, imprima:</p>
 <ol>
 <li>Los valores de  <span><span class="MathJax_Preview">\|\mathbf x\|_2</span><script type="math/tex">\|\mathbf x\|_2</script></span> y <span><span class="MathJax_Preview">\|\mathbf x\|_\infty</span><script type="math/tex">\|\mathbf x\|_\infty</script></span></li>
 <li>El cociente</li>
@@ -423,9 +430,17 @@ $$
 \frac{\|\mathbf x\|_2} {\|\mathbf x\|_\infty}
 </script>
 </div>
-<p>Prueba con muchos ejemplos. A la vista de estos ejemplos, ¿podría parecer que este cociente siempre (para todo <span><span class="MathJax_Preview">\mathbf x</span><script type="math/tex">\mathbf x</script></span>) está acotado superiormente por algún valor <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span>? Si es así, ¡esa sería la constante que estamos buscando!</p>
+<p>Prueba con muchos ejemplos. A la vista de ellos, ¿podrías conjeturar
+que este cociente siempre (para todo <span><span class="MathJax_Preview">\mathbf x\in \mathbb R^2</span><script type="math/tex">\mathbf x\in \mathbb R^2</script></span>) está
+acotado superiormente por algún valor <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span>? Si es así, ¡esa sería la
+constante que estamos buscando!</p>
 <h3 id="spoiler-al-ejercicio-anterior"><em>Spoiler</em> al ejercicio anterior</h3>
-<p>Sí que existe esa constante <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span> tal que <span><span class="MathJax_Preview">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</span><script type="math/tex">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x \|_\infty</script></span>. De hecho, estas dos normas son equivalentes en <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> (de hecho, en todo espacio finito-dimensional, aunque ¡en <em>espacios de dimensión infinita</em>, esta afirmación no es cierta!).</p>
+<p>Esa constante, <span><span class="MathJax_Preview">C_2</span><script type="math/tex">C_2</script></span> tal que <span><span class="MathJax_Preview">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x
+\|_\infty</span><script type="math/tex">\|\mathbf x\|_2 \le C_2 \, \|\mathbf x
+\|_\infty</script></span>, sí que existe. Y estas dos normas son equivalentes en
+<span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> (de hecho, en todo espacio finito-dimensional, aunque
+¡en <em>espacios de dimensión infinita</em>, esta afirmación no es cierta!
+para las normas <span><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span> y 2 generalizadas).</p>
 <p>También la norma 1 es equivalente con las anteriores. De hecho se tiene el siguiente resultado (que se demuestra en el Grado en Matemáticas):</p>
 <h4 id="teorema">Teorema</h4>
 <p><strong>Todas</strong> las normas en <span><span class="MathJax_Preview">\mathbb R^n</span><script type="math/tex">\mathbb R^n</script></span> <strong>son equivalentes</strong>.</p>
