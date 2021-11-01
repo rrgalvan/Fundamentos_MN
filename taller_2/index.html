@@ -199,9 +199,8 @@ int main()
     printf("... introduce 0 para terminar o un entero no nulo para repetir: ");
     scanf("%d", &amp;repetir_test);
   }
-
-return 0;
- }
+  return 0;
+}
 </code></pre>
 <h3 id="algunos-comentarios">Algunos comentarios:</h3>
 <ol>
@@ -241,7 +240,7 @@ $$
 d(\mathbf x, \mathbf y) = +\sqrt{(2-0)^2 + (0-1)^2} = +\sqrt{5} \simeq 2.2360679
 $$</p>
 <p>Ahora podemos definir la <strong>norma euclídea</strong> como «la
-distancia a cero». Concretamente, para todo <span><span class="MathJax_Preview">\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
+distancia a cero» o «el módulo» de un vector. Concretamente, para todo <span><span class="MathJax_Preview">\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
 R^n</span><script type="math/tex">\mathbf x=(x_1,x_2,\dots, x_n)\in \mathbb
 R^n</script></span>, definimos</p>
 <div>
@@ -339,8 +338,7 @@ int main()
     printf("... introduce 0 para terminar o un entero no nulo para repetir: ");
     scanf("%d", &amp;repetir_test);
   }
-
-return 0;
+  return 0;
 }
 </code></pre>
 <h3 id="algunos-comentarios_1">Algunos comentarios:</h3>
@@ -349,7 +347,7 @@ return 0;
 <p>En el programa hemos definido dos funciones matemáticas (antes de ser usadas en la función <em>main</em>) para representar, respectivamente, a los concpetos de valor absoluto de un número real <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> y norma euclídea de un vector de <span><span class="MathJax_Preview">\mathbb R^2</span><script type="math/tex">\mathbb R^2</script></span>, <span><span class="MathJax_Preview">(x_1, x_2)</span><script type="math/tex">(x_1, x_2)</script></span>.</p>
 <ol>
 <li>La función <code>valor_abs</code> toma como parámetro un número real en doble precisión (<code>double</code>) y devuelve un número del mismo tipo</li>
-<li>La función <code>norma_euclidea</code> toma dos parámetros reales, <code>x1</code> y <code>x2</code> y devuelve la norma euclídea del vector correspondiente. En el cuerpo de la función se utiliza la función <code>sqrt</code> de la biblioteca matemática. Para poder utilizarla, se debe incluir la biblioteca <code>math.h</code> (al principio del programa) y (al menos para el compilador <em>gcc</em>) el programa debe enlazarse con esta biblioteca, utilizando la opción <code>-lm</code>. Esta opción vendrá dada «de serie» por algunos entornos de compilación. En otros casos, como con el editor <em>Atom</em>, es probable que debamos especificarlo en la configuración del paquete correspondiente.</li>
+<li>La función <code>norma_euclidea</code> toma dos parámetros,  <code>x1</code> y <code>x2</code>, también de tipo coma flotante en doble precisión, y devuelve la norma euclídea del vector correspondiente. En el cuerpo de la función se utiliza la función <code>sqrt</code> de la biblioteca matemática. Para poder utilizarla, se debe incluir la biblioteca <code>math.h</code> (al principio del programa) y (al menos para el compilador <em>gcc</em>) el programa debe enlazarse con esta biblioteca, utilizando la opción <code>-lm</code>. Esta opción vendrá dada «de serie» por algunos entornos de compilación. En otros casos, como con el editor <em>Atom</em>, es probable que debamos especificarlo en la configuración del paquete correspondiente.</li>
 </ol>
 </li>
 <li>
